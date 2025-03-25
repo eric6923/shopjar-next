@@ -1,4 +1,4 @@
-import isInitialLoad from "@/utils/middleware/isInitialLoad";
+import isInitialLoad from "../utils/middleware/isInitialLoad";
 import { useRouter } from "next/router";
 import React from "react";
 import {
