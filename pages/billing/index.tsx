@@ -319,27 +319,27 @@ const BillingPage: NextPage = () => {
                             Free Setup & Onboarding (worth $100)
                           </Text>
                         </List.Item>
-                        <Box opacity="0">
+                        {/* <Box opacity="0">
                           <List.Item>
                             <Text as="p" variant="bodyLg">
                               Placeholder
                             </Text>
                           </List.Item>
-                        </Box>
-                        <Box opacity="0">
+                        </Box> */}
+                        {/* <Box opacity="0">
                           <List.Item>
                             <Text as="p" variant="bodyLg">
                               Placeholder
                             </Text>
                           </List.Item>
-                        </Box>
-                        <Box opacity="0">
+                        </Box> */}
+                        {/* <Box opacity="0">
                           <List.Item>
                             <Text as="p" variant="bodyLg">
                               Placeholder
                             </Text>
                           </List.Item>
-                        </Box>
+                        </Box> */}
                         
                       </List>
                     </InlineStack>

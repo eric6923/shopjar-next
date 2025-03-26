@@ -17,6 +17,9 @@ import {
   Select,
 } from "@shopify/polaris";
 import { MegaphoneIcon } from "@shopify/polaris-icons";
+import EmailDomain from "./EmailDomains";
+import Integration from "./Integration";
+import Advanced from "./Advanced";
 
 const SettingsPage = () => {
   const [selected, setSelected] = useState(0);
@@ -384,17 +387,17 @@ const SettingsPage = () => {
 
             {selected === 1 && (
               <Box>
-                <Text as="p">Email Domains content here</Text>
+                <EmailDomain/>
               </Box>
             )}
             {selected === 2 && (
               <Box>
-                <Text as="p">Integration content here</Text>
+                <Integration/>
               </Box>
             )}
             {selected === 3 && (
               <Box>
-                <Text as="p">Advanced content here</Text>
+                <Advanced/>
               </Box>
             )}
 
