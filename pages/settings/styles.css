@@ -369,3 +369,29 @@ input:checked + .slider:before {
   align-items: center;
   gap: 10px;
 }
+.translation-icon{
+  margin-top: 24px;
+  margin-left: 24px;
+}
+
+.translation-text1{
+  position: absolute;
+  left: 79px;
+  top: 28px;
+}
+
+.translation-buttongroup{
+  position: absolute;
+  right: 25px;
+  top: 25px;
+}
+
+.referral-grid-text{
+  margin-left: 12px;
+  margin-top: 36px;
+}
+
+.referral-grid-input{
+  margin-top: 36px;
+  
+}

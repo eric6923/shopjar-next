@@ -20,6 +20,7 @@ import { MegaphoneIcon } from "@shopify/polaris-icons";
 import EmailDomain from "./EmailDomains";
 import Integration from "./Integration";
 import Advanced from "./Advanced";
+import { useRouter } from "next/navigation";
 
 const SettingsPage = () => {
   const [selected, setSelected] = useState(0);
@@ -54,7 +55,7 @@ const SettingsPage = () => {
   };
 
   const handleSelectChange = useCallback(
-    (value: string) => setSelected(value),
+    (value: number) => setSelected(value),
     []
   );
 
@@ -81,6 +82,8 @@ const SettingsPage = () => {
       content: "Advanced",
     },
   ];
+
+  const router = useRouter();
 
   return (
     <Frame>
@@ -188,7 +191,7 @@ const SettingsPage = () => {
                       </Text>
                     </div>
                     <Card>
-                      <Button variant="secondary" size="large">
+                      <Button variant="secondary" size="large" onClick={()=>router.push('/settings/translation')}>
                         Manage Translation
                       </Button>
                     </Card>
