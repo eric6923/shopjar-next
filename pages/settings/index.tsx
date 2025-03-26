@@ -241,7 +241,7 @@ const SettingsPage = () => {
                           </svg>
                         </button>
                       </div>
-                      <Button variant="secondary" size="large">
+                      <Button variant="secondary" size="large" onClick={()=>router.push('/settings/my-account-page/customize')}>
                         Customize Referrer / Affliate dashboard page
                       </Button>
                     </Card>
