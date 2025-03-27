@@ -434,7 +434,7 @@ input:checked + .slider:before {
 }
 
 .box-fixed {
-  height: 500px;
+  height: 530px;
   margin-top: 8px;
   overflow-y: auto;  /* Ensure only vertical scroll appears */
   overflow-x: hidden; /* Prevent horizontal scrolling */
@@ -468,4 +468,54 @@ input:checked + .slider:before {
   position: absolute;
   right: 50px;
   top: 37px;
+}
+
+.tab-heading{
+  margin-bottom: 12px;
+  margin-top: 6px;
+}
+
+.value{
+  margin-top: 4px;
+}
+
+.affliate-fixed{
+  height: 530px;
+  margin-top: 8px;
+  overflow-y: auto;  /* Ensure only vertical scroll appears */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  scrollbar-width: thin; /* For Firefox: Makes the scrollbar slimmer */
+  scrollbar-color: #b0b0b0 transparent; /* Custom scrollbar color */
+  margin-right: -15px; /* Creates space on the right to push scrollbar */
+}
+
+.affliate-fixed::-webkit-scrollbar {
+  width: 6px; /* Slim scrollbar */
+  margin-right: -6px; /* Moves scrollbar slightly to the right */
+}
+
+.affliate-fixed::-webkit-scrollbar-thumb {
+  background-color: #b0b0b0; /* Scrollbar color */
+  border-radius: 6px; /* Rounded edges */
+}
+
+.affliate-fixed::-webkit-scrollbar-track {
+  background: transparent; /* Hide track */
+}
+
+.referral-card1{
+  max-width: 40%;
+}
+
+.referral-card1-text1{
+  margin-bottom: 6px;
+}
+
+.referral-card1-text2{
+  margin-top: 18px;
+}
+
+.copy-icon{
+  margin-top: 6px;
+  color: blue;
 }
