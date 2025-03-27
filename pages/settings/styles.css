@@ -395,3 +395,77 @@ input:checked + .slider:before {
   margin-top: 36px;
   
 }
+
+.chevron-icon{
+  width: 48px;
+}
+
+.custom-textfield {
+  position: relative;
+  right: 18px;
+  width: 350px; 
+  max-width: 500px;
+  margin-top: 2px;
+}
+
+.custom-textfield label {
+  margin-top: 8px;
+  display: block;
+}
+
+.referral-link{
+  margin-top: 10px;
+}
+
+.referral-button{
+  margin-top: 18px;
+}
+
+.divider{
+  margin-top: 16px;
+}
+
+.custom-textfield-customcss{
+  position: relative;
+  right: 18px;
+  width: 350px; 
+  max-width: 500px;
+  margin-top: 2px;
+}
+
+.box-fixed {
+  height: 500px;
+  margin-top: 8px;
+  overflow-y: auto;  /* Ensure only vertical scroll appears */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  scrollbar-width: thin; /* For Firefox: Makes the scrollbar slimmer */
+  scrollbar-color: #b0b0b0 transparent; /* Custom scrollbar color */
+  margin-right: -15px; /* Creates space on the right to push scrollbar */
+}
+
+/* For Chrome, Edge, Safari */
+.box-fixed::-webkit-scrollbar {
+  width: 6px; /* Slim scrollbar */
+  margin-right: -6px; /* Moves scrollbar slightly to the right */
+}
+
+.box-fixed::-webkit-scrollbar-thumb {
+  background-color: #b0b0b0; /* Scrollbar color */
+  border-radius: 6px; /* Rounded edges */
+}
+
+.box-fixed::-webkit-scrollbar-track {
+  background: transparent; /* Hide track */
+}
+
+.logout-icon{
+  position: absolute;
+  right: 100px;
+  top: 37px;
+}
+
+.logout-text{
+  position: absolute;
+  right: 50px;
+  top: 37px;
+}
