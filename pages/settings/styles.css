@@ -519,3 +519,154 @@ input:checked + .slider:before {
   margin-top: 6px;
   color: blue;
 }
+
+.refferer-2ndcard{
+  max-width: 205px;
+  position: relative;
+  /* margin-left: 305px; */
+  top: -165px;
+  min-height: 165px;
+  max-height: 165px;
+  display: grid;
+  flex-direction: column; 
+  margin-bottom: -165px; /* Removes extra space */
+  transform: translateX(305px); /* Moves right without affecting layout */
+}
+
+.referrer-3rdcard{
+  min-width: 205px;
+  max-width: 205px;
+  position: relative;
+  margin-left: 527px;
+  top: -165px;
+  min-height: 165px;
+  max-height: 165px;
+  display: grid;
+  flex-direction: column; 
+  
+}
+
+.referrer-2ndcard-inside{
+  margin-top: 20px;
+  margin-left: 56px;
+}
+
+.referrer-2ndcard-text1{
+position: absolute;
+left: 62px;
+}
+
+.referrer-2ndcard-text2{
+position: absolute;
+bottom: 28px;
+right: 102px;
+}
+
+.referrer-3ndcard-text1{
+  position: absolute;
+  left: 52px;
+}
+
+.referral-card-total{
+  margin-top: 12px;
+  position: relative;
+  height: 410px;
+}
+
+.referrer-text-table{
+  position: absolute;
+  top: 210px;
+}
+
+.referrer-table{
+  position: relative;
+  top: -80px;
+}
+
+.grid-affliate{
+  position: relative;
+  right: -310px;
+  top: -170px;
+  display: grid;
+  gap: 20px;
+}
+
+.affliate-card-2nd{
+  margin-top: 4px;
+  margin-left: 52px;
+}
+
+.affliate-card2-text{
+  margin-left: 38px;
+}
+
+.affliate-card2-text2{
+  margin-left: 62px;
+}
+
+.affliate-card3-text{
+  margin-left: 28px;
+}
+
+.affliate-card3-text2{
+  margin-left: 64px;
+}
+
+.affliate-card4-text{
+  margin-left: 28px;
+}
+
+.affliate-card4-text2{
+  margin-left: 52px;
+}
+
+.affliate-card5-text{
+  margin-left: 38px;
+}
+
+.affliate-card5-text2{
+  margin-left: 50px;
+}
+
+.grid1{
+  width: 190px;
+}
+
+.grid2{
+  width: 190px;
+}
+
+.grid3{
+  width: 190px;
+}
+
+.grid-sample1{
+  position: relative;
+  right: -22px;
+}
+
+.affliate-coupon-text{
+  position: absolute;
+  top: 195px;
+}
+
+.input{
+  width: 265px;
+  margin-top: 6px;
+}
+
+.grid-affliate2{
+  position: relative;
+  top: -150px;
+  display: grid;
+  gap: 20px;
+
+}.grid4{
+  width: 290px;
+}
+
+.grid5{
+  width: 400px;
+  position: absolute;
+  right: 8px;
+}
