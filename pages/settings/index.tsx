@@ -317,10 +317,10 @@ const SettingsPage = () => {
                               OTP Login?
                             </Text>
                           </div>
-                          <Button variant="secondary" size="large">
+                          <Button variant="secondary" size="large" onClick={()=>router.push('/settings/otp/email/customize')}>
                             Customize OTP Email
                           </Button>
-                          <Button variant="secondary" size="large">
+                          <Button variant="secondary" size="large" onClick={()=> router.push('settings/otp/page/customize')}>
                             Customize OTP Page
                           </Button>
                         </InlineStack>

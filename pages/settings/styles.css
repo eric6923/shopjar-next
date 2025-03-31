@@ -735,3 +735,97 @@ right: 102px;
   position: relative;
   top: -90px; 
 }
+
+.card1{
+  margin-left: 22px;
+  max-width: 560px;
+}
+
+.card2{
+  margin-left: 20px;
+  width: 820px;
+  height: 800px;
+}
+
+.card2-img{
+  margin-left: 300px;
+  margin-bottom: 6px;
+}
+
+.card2-text1{
+margin-left: 220px;
+}
+
+.card2-text2{
+  margin-left: 45px;
+}
+
+.card2-text3{
+  margin-left: 270px;
+}
+
+.inner-card{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 15px;
+  width: 760px;
+}
+
+.div-heading{
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.email-text1{
+  margin-top: 4px;
+  margin-right: 8px;
+}
+
+.email-btn{
+  margin-top: 4px;
+  position: relative;
+  right: 20px;
+}
+
+.email-text{
+  margin-top: 6px;
+  position: relative;
+  right: 20px;
+}
+
+.send-otp-text{
+  padding-top: 80px;
+  padding-left: 200px;
+}
+
+.send-otp-text2{
+  padding-top: 15px;
+  text-align: center;
+}
+
+.send-otp-textfield{
+  padding-left: 240px;
+  padding-top: 22px;
+  max-width: 500px;
+}
+
+.send-otp-btn{
+  padding-left: 285px;
+  padding-top: 12px;
+}
+
+.send-otp-text3{
+  padding-left: 180px;
+  padding-top: 16px;
+}
+
+.send-otp-text4{
+  position: relative;
+  right: -400px;
+  top: -20px;
+}
+
+.send-otp-text5{
+  padding-left: 362px;
+}
