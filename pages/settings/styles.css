@@ -479,11 +479,18 @@ input:checked + .slider:before {
   margin-top: 4px;
 }
 
+.affliate-card-total{
+  margin-top: 12px;
+  position: relative;
+  height: 760px;
+}
+
 .affliate-fixed{
+  position: relative;
   height: 530px;
   margin-top: 8px;
-  overflow-y: auto;  /* Ensure only vertical scroll appears */
-  overflow-x: hidden; /* Prevent horizontal scrolling */
+  /* overflow-y: auto;   */
+  /* overflow-x: hidden; */
   scrollbar-width: thin; /* For Firefox: Makes the scrollbar slimmer */
   scrollbar-color: #b0b0b0 transparent; /* Custom scrollbar color */
   margin-right: -15px; /* Creates space on the right to push scrollbar */
@@ -572,6 +579,8 @@ right: 102px;
   position: relative;
   height: 410px;
 }
+
+
 
 .referrer-text-table{
   position: absolute;
@@ -669,4 +678,60 @@ right: 102px;
   width: 400px;
   position: absolute;
   right: 8px;
+  max-height: 500px;
+}
+
+.paypal-svg{
+  width: 80px;
+  margin-left: 90px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.paypal-textfield{
+  max-width: 180px;
+  margin-top: 6px;
+}
+
+.paypal-btn{
+  position: absolute;
+  right: 16px;
+  top: 104px;
+}
+
+.grid-5-svg{
+  margin-left: 170px;
+}
+
+.grid-5-text{
+  margin-left: 159px;
+}
+
+.grid-5-text2{
+  margin-left: 173px;
+}
+
+.grid-5-btn{
+  margin-left: 122px;
+  margin-top: 4px;
+}
+
+.affliate-text-table{
+  position: relative;
+  top: -130px;
+}
+
+.affliate-table1{
+  position: relative;
+  top: -120px; 
+}
+
+.affliate-text-table2{
+  position: relative;
+  top: -100px;
+}
+
+.affliate-table2{
+  position: relative;
+  top: -90px; 
 }
