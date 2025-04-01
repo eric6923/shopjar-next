@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+"use client"
+
+import { useCallback, useState } from "react"
 import {
   Button,
   ButtonGroup,
@@ -12,37 +14,54 @@ import {
   TextField,
   Divider,
   Tabs,
-  LegacyCard,
-  DataTable,
-  Page,
-  Grid,
-} from "@shopify/polaris";
-import {
-  ArrowLeftIcon,
-  ChevronDownIcon,
-  ChevronUpIcon,
-  ExitIcon,
-} from "@shopify/polaris-icons";
-import router from "next/router";
+  ColorPicker,
+  hsbToHex,
+  Popover,
+  Checkbox,
+} from "@shopify/polaris"
+import { ArrowLeftIcon, ChevronDownIcon, ChevronUpIcon } from "@shopify/polaris-icons"
+import router from "next/router"
 
 export default function Customize() {
   // State for collapsible sections
-  const [isPageTitleOpen, setIsPageTitleOpen] = useState(false);
-  const [isReferralOpen, setIsReferralOpen] = useState(false);
-  const [isStatsOpen, setIsStatsOpen] = useState(false);
-  const [isRewardOpen, setIsRewardOpen] = useState(false);
-  const [isMessagesOpen, setIsMessagesOpen] = useState(false);
-  const [isCustomcssOpen, setIsCustomcssOpen] = useState(false);
+  const [textColor, setTextColor] = useState({ hue: 0, brightness: 0.6, saturation: 0.7 })
+  const [bgColor, setBgColor] = useState({ hue: 200, brightness: 0.6, saturation: 0.7 })
 
-  const [isAstatsOpen, setAstatsOpen] = useState(false);
-  const [isAcouponsOpen, setAcouponsOpen] = useState(false);
-  const [isApaypalOpen, setApaypalOpen] = useState(false);
-  const [isACTransactionOpen, setACTransactionOpen] = useState(false);
-  const [isACCouponOpen, setACCouponOpen] = useState(false);
-  const [isAMessageOpen, setAMessageOpen] = useState(false);
-  const [isACustomcssOpen, setACustomcssOpen] = useState(false);
+  // Separate state variables for each tab's color pickers
+  // Send OTP tab (tab 0)
+  const [sendOtpTextPopoverActive, setSendOtpTextPopoverActive] = useState(false)
+  const [sendOtpBgPopoverActive, setSendOtpBgPopoverActive] = useState(false)
+
+  // Verify OTP tab (tab 1)
+  const [verifyOtpTextPopoverActive, setVerifyOtpTextPopoverActive] = useState(false)
+  const [verifyOtpBgPopoverActive, setVerifyOtpBgPopoverActive] = useState(false)
+
+  // Toggle functions for each color picker
+  const toggleSendOtpTextPopover = useCallback(() => setSendOtpTextPopoverActive((active) => !active), [])
+  const toggleSendOtpBgPopover = useCallback(() => setSendOtpBgPopoverActive((active) => !active), [])
+  const toggleVerifyOtpTextPopover = useCallback(() => setVerifyOtpTextPopoverActive((active) => !active), [])
+  const toggleVerifyOtpBgPopover = useCallback(() => setVerifyOtpBgPopoverActive((active) => !active), [])
+
+  const [isPageTitleOpen, setIsPageTitleOpen] = useState(false)
+  const [isReferralOpen, setIsReferralOpen] = useState(false)
+  const [isStatsOpen, setIsStatsOpen] = useState(false)
+  const [isRewardOpen, setIsRewardOpen] = useState(false)
+  const [isMessagesOpen, setIsMessagesOpen] = useState(false)
+  const [isCustomcssOpen, setIsCustomcssOpen] = useState(false)
+
+  const [isAstatsOpen, setAstatsOpen] = useState(false)
+  const [isAcouponsOpen, setAcouponsOpen] = useState(false)
+  const [isApaypalOpen, setApaypalOpen] = useState(false)
+  const [isACTransactionOpen, setACTransactionOpen] = useState(false)
+  const [isACCouponOpen, setACCouponOpen] = useState(false)
+  const [isAMessageOpen, setAMessageOpen] = useState(false)
+  const [isACustomcssOpen, setACustomcssOpen] = useState(false)
   // State for tabs
-  const [selectedTab, setSelectedTab] = useState(0);
+  const [selectedTab, setSelectedTab] = useState(0)
+
+  //CheckBox For Login
+  const [checked, setChecked] = useState(false)
+  const handleChange = useCallback((newChecked: boolean) => setChecked(newChecked), [])
 
   // Tabs configuration
   const tabs = [
@@ -58,72 +77,72 @@ export default function Customize() {
       accessibilityLabel: "Affiliate tab",
       panelID: "affiliate-panel",
     },
-  ];
+  ]
 
   // Collapsible toggle functions
   const togglePageTitleCollapsible = () => {
-    setIsPageTitleOpen(!isPageTitleOpen);
-  };
+    setIsPageTitleOpen(!isPageTitleOpen)
+  }
   const toggleReferralCollapsible = () => {
-    setIsReferralOpen(!isReferralOpen);
-  };
+    setIsReferralOpen(!isReferralOpen)
+  }
   const toggleStatsCollapsible = () => {
-    setIsStatsOpen(!isStatsOpen);
-  };
+    setIsStatsOpen(!isStatsOpen)
+  }
   const toggleRewardCollapsible = () => {
-    setIsRewardOpen(!isRewardOpen);
-  };
+    setIsRewardOpen(!isRewardOpen)
+  }
   const toggleMessagesCollapsible = () => {
-    setIsMessagesOpen(!isMessagesOpen);
-  };
+    setIsMessagesOpen(!isMessagesOpen)
+  }
   const toggleCustomcssCollapsible = () => {
-    setIsCustomcssOpen(!isCustomcssOpen);
-  };
+    setIsCustomcssOpen(!isCustomcssOpen)
+  }
   const toggleAstatsCollapsible = () => {
-    setAstatsOpen(!isAstatsOpen);
-  };
+    setAstatsOpen(!isAstatsOpen)
+  }
   const toggleAcouponsCollapsible = () => {
-    setAcouponsOpen(!isAcouponsOpen);
-  };
+    setAcouponsOpen(!isAcouponsOpen)
+  }
   const toggleApaypalCollapsible = () => {
-    setApaypalOpen(!isApaypalOpen);
-  };
+    setApaypalOpen(!isApaypalOpen)
+  }
   const toggleACTransactionCollapsible = () => {
-    setACTransactionOpen(!isACTransactionOpen);
-  };
+    setACTransactionOpen(!isACTransactionOpen)
+  }
   const toggleACCouponCollapsible = () => {
-    setACCouponOpen(!isACCouponOpen);
-  };
+    setACCouponOpen(!isACCouponOpen)
+  }
   const toggleAMessagesCollapsible = () => {
-    setAMessageOpen(!isAMessageOpen);
-  };
+    setAMessageOpen(!isAMessageOpen)
+  }
   const toggleACustomcssCollapsible = () => {
-    setACustomcssOpen(!isACustomcssOpen);
-  };
+    setACustomcssOpen(!isACustomcssOpen)
+  }
 
   // Handle tab change
   const handleTabChange = (selectedTabIndex: any) => {
-    setSelectedTab(selectedTabIndex);
-  };
+    setSelectedTab(selectedTabIndex)
+  }
 
   function handleLogout() {
-    alert("Logout Functionality");
+    alert("Logout Functionality")
   }
-  const rows = [["12-04-2025", "Raman", 124689, 140, "Pending"]];
+  const rows = [["12-04-2025", "Raman", 124689, 140, "Pending"]]
 
-  const rows2 = [["12-04-2025", 10000, "Pending"]];
+  const rows2 = [["12-04-2025", 10000, "Pending"]]
 
-  const rows3 = [["12-04-2025", "Ram", 1000, 1200, "Pending"]];
+  const rows3 = [["12-04-2025", "Ram", 1000, 1200, "Pending"]]
   // Render left grid content based on selected tab
   const renderLeftGridContent = () => {
     if (selectedTab === 0) {
-      // Referrer tab
+      // Send OTP tab
       return (
         <div className="box-fixed">
           <Box padding="400">
             <InlineStack align="space-between" blockAlign="center">
               <Text as="p" variant="bodyLg">
-                PAGE TITLE
+                TITLE & DESCRIPTION
               </Text>
 
               <Button
@@ -134,9 +153,7 @@ export default function Customize() {
                 className="chevron-icon"
                 ariaControls="page-title-collapsible"
               >
-                <Icon
-                  source={isPageTitleOpen ? ChevronUpIcon : ChevronDownIcon}
-                />
+                <Icon source={isPageTitleOpen ? ChevronUpIcon : ChevronDownIcon} />
               </Button>
             </InlineStack>
 
@@ -151,20 +168,10 @@ export default function Customize() {
             >
               <Box padding="400" paddingInline="400">
                 <div className="custom-textfield">
-                  <TextField label="" autoComplete="off" />
+                  <TextField label="Title" autoComplete="off" />
                 </div>
-                <div className="custom-textfield">
-                  <TextField label="Referral Tab title" autoComplete="off" />
-                </div>
-                <div className="custom-textfield">
-                  <TextField label="Affliate Tab title" autoComplete="off" />
-                </div>
-                <div className="custom-textfield">
-                  <TextField
-                    label="Logout Text
-"
-                    autoComplete="off"
-                  />
+                <div className="custom-textfield-desc">
+                  <TextField label="Description" autoComplete="off" />
                 </div>
               </Box>
             </Collapsible>
@@ -176,7 +183,7 @@ export default function Customize() {
             <InlineStack align="space-between" blockAlign="center">
               <div className="referral-link">
                 <Text as="p" variant="bodyLg">
-                  REFERRAL LINK
+                  INPUT FIELDS
                 </Text>
               </div>
               <div className="referral-button">
@@ -188,9 +195,7 @@ export default function Customize() {
                   className="chevron-icon"
                   ariaControls="referral-link-collapsible"
                 >
-                  <Icon
-                    source={isReferralOpen ? ChevronUpIcon : ChevronDownIcon}
-                  />
+                  <Icon source={isReferralOpen ? ChevronUpIcon : ChevronDownIcon} />
                 </Button>
               </div>
             </InlineStack>
@@ -205,13 +210,70 @@ export default function Customize() {
             >
               <Box padding="400" paddingInline="400">
                 <div className="custom-textfield">
-                  <TextField label="Referral link title" autoComplete="off" />
+                  <TextField label="Label" autoComplete="off" />
                 </div>
                 <div className="custom-textfield">
-                  <TextField
-                    label="Referral link share text"
-                    autoComplete="off"
-                  />
+                  <TextField label="Placeholder" autoComplete="off" />
+                </div>
+                <div className="custom-textfield">
+                  <TextField label="Button Text" autoComplete="off" />
+                </div>
+
+                <div className="btn-backgroundcolor">
+                  <Text variant="bodyMd" as="span">
+                    Button Text Color
+                  </Text>
+                  <Popover
+                    active={sendOtpTextPopoverActive}
+                    activator={
+                      <div
+                        style={{
+                          width: "40px",
+                          height: "25px",
+                          borderRadius: "6px",
+                          border: "1px solid #ccc",
+                          backgroundColor: hsbToHex(textColor),
+                          cursor: "pointer",
+                        }}
+                        onClick={toggleSendOtpTextPopover}
+                      />
+                    }
+                    onClose={toggleSendOtpTextPopover}
+                  >
+                    <Popover.Section>
+                      <ColorPicker onChange={setTextColor} color={textColor} />
+                    </Popover.Section>
+                  </Popover>
+                </div>
+                {/* Button Background Color Picker */}
+                <div className="btn-backgroundcolor2">
+                  <Text variant="bodyMd" as="span">
+                    Button Background Color
+                  </Text>
+                  <Popover
+                    active={sendOtpBgPopoverActive}
+                    activator={
+                      <div
+                        style={{
+                          width: "40px",
+                          height: "25px",
+                          borderRadius: "6px",
+                          border: "1px solid #ccc",
+                          backgroundColor: hsbToHex(bgColor),
+                          cursor: "pointer",
+                        }}
+                        onClick={toggleSendOtpBgPopover}
+                      />
+                    }
+                    onClose={toggleSendOtpBgPopover}
+                  >
+                    <Popover.Section>
+                      <ColorPicker onChange={setBgColor} color={bgColor} />
+                    </Popover.Section>
+                  </Popover>
+                </div>
+                <div className="custom-textfield">
+                  <TextField label="Invalid Email Message" autoComplete="off" />
                 </div>
               </Box>
             </Collapsible>
@@ -223,7 +285,7 @@ export default function Customize() {
             <InlineStack align="space-between" blockAlign="center">
               <div className="referral-link">
                 <Text as="p" variant="bodyLg">
-                  STATS
+                  REDIRECT LINKS
                 </Text>
               </div>
               <div className="referral-button">
@@ -235,9 +297,7 @@ export default function Customize() {
                   className="chevron-icon"
                   ariaControls="page-title-collapsible"
                 >
-                  <Icon
-                    source={isStatsOpen ? ChevronUpIcon : ChevronDownIcon}
-                  />
+                  <Icon source={isStatsOpen ? ChevronUpIcon : ChevronDownIcon} />
                 </Button>
               </div>
             </InlineStack>
@@ -253,120 +313,19 @@ export default function Customize() {
             >
               <Box padding="400" paddingInline="400">
                 <div className="custom-textfield">
-                  <TextField label="Total sales text" autoComplete="off" />
+                  <TextField label="Referral redirect Link text" autoComplete="off" />
                 </div>
                 <div className="custom-textfield">
-                  <TextField label="Total rewards text" autoComplete="off" />
-                </div>
-              </Box>
-            </Collapsible>
-          </Box>
-          <div className="divider">
-            <Divider />
-          </div>
-          <Box padding="400">
-            <InlineStack align="space-between" blockAlign="center">
-              <div className="referral-link">
-                <Text as="p" variant="bodyLg">
-                  REWARD HISTORY
-                </Text>
-              </div>
-              <div className="referral-button">
-                <Button
-                  variant="monochromePlain"
-                  onClick={toggleRewardCollapsible}
-                  ariaExpanded={isRewardOpen}
-                  size="large"
-                  className="chevron-icon"
-                  ariaControls="page-title-collapsible"
-                >
-                  <Icon
-                    source={isRewardOpen ? ChevronUpIcon : ChevronDownIcon}
-                  />
-                </Button>
-              </div>
-            </InlineStack>
-
-            <Collapsible
-              open={isRewardOpen}
-              id="page-title-collapsible"
-              transition={{
-                duration: "500ms",
-                timingFunction: "ease-in-out",
-              }}
-              style={{ overflow: "visible" }}
-            >
-              <Box padding="400" paddingInline="400">
-                <div className="custom-textfield">
-                  <TextField label="Title" autoComplete="off" />
+                  <TextField label="Affiliate redirect Link Text" autoComplete="off" />
                 </div>
                 <div className="custom-textfield">
-                  <TextField label="Date header" autoComplete="off" />
+                  <TextField label="Login Page Link Text" autoComplete="off" />
                 </div>
-                <div className="custom-textfield">
-                  <TextField label="Customer header" autoComplete="off" />
-                </div>
-                <div className="custom-textfield">
-                  <TextField label="Order Value header" autoComplete="off" />
-                </div>
-                <div className="custom-textfield">
-                  <TextField label="Commission header" autoComplete="off" />
-                </div>
-                <div className="custom-textfield">
-                  <TextField label="Status header" autoComplete="off" />
-                </div>
-                <div className="custom-textfield">
-                  <TextField label="No rewards yet" autoComplete="off" />
-                </div>
-              </Box>
-            </Collapsible>
-          </Box>
-          <div className="divider">
-            <Divider />
-          </div>
-          <Box padding="400">
-            <InlineStack align="space-between" blockAlign="center">
-              <div className="referral-link">
-                <Text as="p" variant="bodyLg">
-                  MESSAGES
-                </Text>
-              </div>
-              <div className="referral-button">
-                <Button
-                  variant="monochromePlain"
-                  onClick={toggleMessagesCollapsible}
-                  ariaExpanded={isMessagesOpen}
-                  size="large"
-                  className="chevron-icon"
-                  ariaControls="page-title-collapsible"
-                >
-                  <Icon
-                    source={isMessagesOpen ? ChevronUpIcon : ChevronDownIcon}
-                  />
-                </Button>
-              </div>
-            </InlineStack>
-
-            <Collapsible
-              open={isMessagesOpen}
-              id="page-title-collapsible"
-              transition={{
-                duration: "500ms",
-                timingFunction: "ease-in-out",
-              }}
-            >
-              <Box padding="400" paddingInline="400">
-                <div className="custom-textfield">
-                  <TextField
-                    label="Member blocked message"
-                    autoComplete="off"
-                  />
-                </div>
-                <div className="custom-textfield">
-                  <TextField
-                    label="Member programs disabled message"
-                    autoComplete="off"
-                  />
+                <div className="checkbox-text">
+                  <Checkbox label="Login" checked={checked} onChange={handleChange} />
+                  <Text as="p" variant="bodyMd">
+                    Enable the link to the normal Shopify store login page?
+                  </Text>
                 </div>
               </Box>
             </Collapsible>
@@ -384,21 +343,19 @@ export default function Customize() {
               <div className="referral-button">
                 <Button
                   variant="monochromePlain"
-                  onClick={toggleCustomcssCollapsible}
-                  ariaExpanded={isCustomcssOpen}
+                  onClick={toggleRewardCollapsible}
+                  ariaExpanded={isRewardOpen}
                   size="large"
                   className="chevron-icon"
                   ariaControls="page-title-collapsible"
                 >
-                  <Icon
-                    source={isCustomcssOpen ? ChevronUpIcon : ChevronDownIcon}
-                  />
+                  <Icon source={isRewardOpen ? ChevronUpIcon : ChevronDownIcon} />
                 </Button>
               </div>
             </InlineStack>
 
             <Collapsible
-              open={isCustomcssOpen}
+              open={isRewardOpen}
               id="page-title-collapsible"
               transition={{
                 duration: "500ms",
@@ -406,22 +363,22 @@ export default function Customize() {
               }}
             >
               <Box padding="400" paddingInline="400">
-                <div className="custom-textfield-customcss">
+                <div className="custom-textfield-desc">
                   <TextField label="Custom css" autoComplete="off" />
                 </div>
               </Box>
             </Collapsible>
           </Box>
         </div>
-      );
+      )
     } else {
-      // Affiliate tab
+      // Verify OTP tab
       return (
         <div className="affliate-fixed">
           <Box padding="400">
             <InlineStack align="space-between" blockAlign="center">
               <Text as="p" variant="bodyLg">
-                PAGE TITLE
+                TITLE & DESCRIPTION
               </Text>
 
               <Button
@@ -432,9 +389,7 @@ export default function Customize() {
                 className="chevron-icon"
                 ariaControls="page-title-collapsible"
               >
-                <Icon
-                  source={isPageTitleOpen ? ChevronUpIcon : ChevronDownIcon}
-                />
+                <Icon source={isPageTitleOpen ? ChevronUpIcon : ChevronDownIcon} />
               </Button>
             </InlineStack>
 
@@ -448,16 +403,15 @@ export default function Customize() {
             >
               <Box padding="400" paddingInline="400">
                 <div className="custom-textfield">
-                  <TextField label="" autoComplete="off" />
+                  <TextField label="Title" autoComplete="off" />
                 </div>
-                <div className="custom-textfield">
-                  <TextField label="Referral Tab title" autoComplete="off" />
+                <div className="custom-textfield-desc">
+                  <TextField label="Description" autoComplete="off" />
                 </div>
-                <div className="custom-textfield">
-                  <TextField label="Affiliate Tab title" autoComplete="off" />
-                </div>
-                <div className="custom-textfield">
-                  <TextField label="Logout Text" autoComplete="off" />
+                <div className="verify-otp-text">
+                  <Text as="p" variant="bodyLg">
+                    Available short codes : {`{{ email_id }}`} --{">"} Email ID of the user
+                  </Text>
                 </div>
               </Box>
             </Collapsible>
@@ -469,7 +423,7 @@ export default function Customize() {
             <InlineStack align="space-between" blockAlign="center">
               <div className="referral-link">
                 <Text as="p" variant="bodyLg">
-                  AFFILIATE LINK
+                  INPUT FIELDS
                 </Text>
               </div>
               <div className="affiliate-button">
@@ -481,9 +435,7 @@ export default function Customize() {
                   className="chevron-icon"
                   ariaControls="affiliate-settings-collapsible"
                 >
-                  <Icon
-                    source={isReferralOpen ? ChevronUpIcon : ChevronDownIcon}
-                  />
+                  <Icon source={isReferralOpen ? ChevronUpIcon : ChevronDownIcon} />
                 </Button>
               </div>
             </InlineStack>
@@ -499,360 +451,66 @@ export default function Customize() {
             >
               <Box padding="400" paddingInline="400">
                 <div className="custom-textfield">
-                  <TextField label="Affiliate link title" autoComplete="off" />
+                  <TextField label="Label" autoComplete="off" />
                 </div>
                 <div className="custom-textfield">
-                  <TextField
-                    label="Affiliate link share text"
-                    autoComplete="off"
-                  />
+                  <TextField label="Button Text" autoComplete="off" />
                 </div>
-              </Box>
-            </Collapsible>
-          </Box>
-          <div className="divider">
-            <Divider />
-          </div>
-          <Box padding="400">
-            <InlineStack align="space-between" blockAlign="center">
-              <div className="referral-link">
-                <Text as="p" variant="bodyLg">
-                  STATS
-                </Text>
-              </div>
-              <div className="affiliate-button">
-                <Button
-                  variant="monochromePlain"
-                  onClick={toggleAstatsCollapsible}
-                  ariaExpanded={isAstatsOpen}
-                  size="large"
-                  className="chevron-icon"
-                  ariaControls="affiliate-settings-collapsible"
-                >
-                  <Icon
-                    source={isAstatsOpen ? ChevronUpIcon : ChevronDownIcon}
-                  />
-                </Button>
-              </div>
-            </InlineStack>
-
-            <Collapsible
-              open={isAstatsOpen}
-              id="affiliate-settings-collapsible"
-              transition={{
-                duration: "500ms",
-                timingFunction: "ease-in-out",
-              }}
-              style={{ overflow: "visible" }}
-            >
-              <Box padding="400" paddingInline="400">
-                <div className="custom-textfield">
-                  <TextField label="Total sales text" autoComplete="off" />
-                </div>
-                <div className="custom-textfield">
-                  <TextField label="Total rewards text" autoComplete="off" />
-                </div>
-                <div className="custom-textfield">
-                  <TextField
-                    label="Commission Balance text"
-                    autoComplete="off"
-                  />
-                </div>
-                <div className="custom-textfield">
-                  <TextField
-                    label="Coupon claim button text"
-                    autoComplete="off"
-                  />
-                </div>
-                <div className="custom-textfield">
-                  <TextField label="Total Earnings text" autoComplete="off" />
-                </div>
-                <div className="custom-textfield">
-                  <TextField label="Total Paid text" autoComplete="off" />
-                </div>
-              </Box>
-            </Collapsible>
-          </Box>
-          <div className="divider">
-            <Divider />
-          </div>
-          <Box padding="400">
-            <InlineStack align="space-between" blockAlign="center">
-              <div className="referral-link">
-                <Text as="p" variant="bodyLg">
-                  YOUR AFFILIATE COUPONS
-                </Text>
-              </div>
-              <div className="affiliate-button">
-                <Button
-                  variant="monochromePlain"
-                  onClick={toggleAcouponsCollapsible}
-                  ariaExpanded={isAcouponsOpen}
-                  size="large"
-                  className="chevron-icon"
-                  ariaControls="affiliate-settings-collapsible"
-                >
-                  <Icon
-                    source={isAcouponsOpen ? ChevronUpIcon : ChevronDownIcon}
-                  />
-                </Button>
-              </div>
-            </InlineStack>
-
-            <Collapsible
-              open={isAcouponsOpen}
-              id="affiliate-settings-collapsible"
-              transition={{
-                duration: "500ms",
-                timingFunction: "ease-in-out",
-              }}
-              style={{ overflow: "visible" }}
-            >
-              <Box padding="400" paddingInline="400">
-                <div className="custom-textfield">
-                  <TextField
-                    label="Your Affiliate coupons title"
-                    autoComplete="off"
-                  />
-                </div>
-              </Box>
-            </Collapsible>
-          </Box>
-          <div className="divider">
-            <Divider />
-          </div>
-          <Box padding="400">
-            <InlineStack align="space-between" blockAlign="center">
-              <div className="referral-link">
-                <Text as="p" variant="bodyLg">
-                  PAYPAL ID
-                </Text>
-              </div>
-              <div className="affiliate-button">
-                <Button
-                  variant="monochromePlain"
-                  onClick={toggleApaypalCollapsible}
-                  ariaExpanded={isApaypalOpen}
-                  size="large"
-                  className="chevron-icon"
-                  ariaControls="affiliate-settings-collapsible"
-                >
-                  <Icon
-                    source={isApaypalOpen ? ChevronUpIcon : ChevronDownIcon}
-                  />
-                </Button>
-              </div>
-            </InlineStack>
-
-            <Collapsible
-              open={isApaypalOpen}
-              id="affiliate-settings-collapsible"
-              transition={{
-                duration: "500ms",
-                timingFunction: "ease-in-out",
-              }}
-              style={{ overflow: "visible" }}
-            >
-              <Box padding="400" paddingInline="400">
-                <div className="custom-textfield">
-                  <TextField
-                    label="Paypal Email label text"
-                    autoComplete="off"
-                  />
-                </div>
-                <div className="custom-textfield">
-                  <TextField label="Confirm Button text" autoComplete="off" />
-                </div>
-                <div className="custom-textfield">
-                  <TextField
-                    label="PayPal Blocked Message"
-                    autoComplete="off"
-                  />
-                </div>
-                <div className="custom-textfield">
-                  <TextField
-                    label="Update Email Label Text"
-                    autoComplete="off"
-                  />
-                </div>
-                <div className="custom-textfield">
-                  <TextField label="Update Button text" autoComplete="off" />
-                </div>
-              </Box>
-            </Collapsible>
-          </Box>
-          <div className="divider">
-            <Divider />
-          </div>
-          <Box padding="400">
-            <InlineStack align="space-between" blockAlign="center">
-              <div className="referral-link">
-                <Text as="p" variant="bodyLg">
-                  COMMISSIONS TRANSACTIONS
-                </Text>
-              </div>
-              <div className="affiliate-button">
-                <Button
-                  variant="monochromePlain"
-                  onClick={toggleACTransactionCollapsible}
-                  ariaExpanded={isACTransactionOpen}
-                  size="large"
-                  className="chevron-icon"
-                  ariaControls="affiliate-settings-collapsible"
-                >
-                  <Icon
-                    source={
-                      isACTransactionOpen ? ChevronUpIcon : ChevronDownIcon
+                <div className="btn-backgroundcolor">
+                  <Text variant="bodyMd" as="span">
+                    Button Text Color
+                  </Text>
+                  <Popover
+                    active={verifyOtpTextPopoverActive}
+                    activator={
+                      <div
+                        style={{
+                          width: "40px",
+                          height: "25px",
+                          borderRadius: "6px",
+                          border: "1px solid #ccc",
+                          backgroundColor: hsbToHex(textColor),
+                          cursor: "pointer",
+                        }}
+                        onClick={toggleVerifyOtpTextPopover}
+                      />
                     }
-                  />
-                </Button>
-              </div>
-            </InlineStack>
-
-            <Collapsible
-              open={isACTransactionOpen}
-              id="affiliate-settings-collapsible"
-              transition={{
-                duration: "500ms",
-                timingFunction: "ease-in-out",
-              }}
-              style={{ overflow: "visible" }}
-            >
-              <Box padding="400" paddingInline="400">
-                <div className="custom-textfield">
-                  <TextField label="Commissions Title" autoComplete="off" />
+                    onClose={toggleVerifyOtpTextPopover}
+                  >
+                    <Popover.Section>
+                      <ColorPicker onChange={setTextColor} color={textColor} />
+                    </Popover.Section>
+                  </Popover>
+                </div>
+                {/* Button Background Color Picker */}
+                <div className="btn-backgroundcolor2">
+                  <Text variant="bodyMd" as="span">
+                    Button Background Color
+                  </Text>
+                  <Popover
+                    active={verifyOtpBgPopoverActive}
+                    activator={
+                      <div
+                        style={{
+                          width: "40px",
+                          height: "25px",
+                          borderRadius: "6px",
+                          border: "1px solid #ccc",
+                          backgroundColor: hsbToHex(bgColor),
+                          cursor: "pointer",
+                        }}
+                        onClick={toggleVerifyOtpBgPopover}
+                      />
+                    }
+                    onClose={toggleVerifyOtpBgPopover}
+                  >
+                    <Popover.Section>
+                      <ColorPicker onChange={setBgColor} color={bgColor} />
+                    </Popover.Section>
+                  </Popover>
                 </div>
                 <div className="custom-textfield">
-                  <TextField label="Date Header" autoComplete="off" />
-                </div>
-                <div className="custom-textfield">
-                  <TextField label="Amount Header" autoComplete="off" />
-                </div>
-                <div className="custom-textfield">
-                  <TextField label="Reward type Header" autoComplete="off" />
-                </div>
-                <div className="custom-textfield">
-                  <TextField
-                    label="No commissions debit yet"
-                    autoComplete="off"
-                  />
-                </div>
-              </Box>
-            </Collapsible>
-          </Box>
-          <div className="divider">
-            <Divider />
-          </div>
-          <Box padding="400">
-            <InlineStack align="space-between" blockAlign="center">
-              <div className="referral-link">
-                <Text as="p" variant="bodyLg">
-                  COMMISSION COUPON CLAIM POPUP
-                </Text>
-              </div>
-              <div className="affiliate-button">
-                <Button
-                  variant="monochromePlain"
-                  onClick={toggleACCouponCollapsible}
-                  ariaExpanded={isACCouponOpen}
-                  size="large"
-                  className="chevron-icon"
-                  ariaControls="affiliate-settings-collapsible"
-                >
-                  <Icon
-                    source={isACCouponOpen ? ChevronUpIcon : ChevronDownIcon}
-                  />
-                </Button>
-              </div>
-            </InlineStack>
-
-            <Collapsible
-              open={isACCouponOpen}
-              id="affiliate-settings-collapsible"
-              transition={{
-                duration: "500ms",
-                timingFunction: "ease-in-out",
-              }}
-              style={{ overflow: "visible" }}
-            >
-              <Box padding="400" paddingInline="400">
-                <div className="custom-textfield">
-                  <TextField label="Popup Title" autoComplete="off" />
-                </div>
-                <div className="custom-textfield">
-                  <TextField label="Popup description" autoComplete="off" />
-                </div>
-                <div className="custom-textfield">
-                  <TextField label="Button text" autoComplete="off" />
-                </div>
-                <div className="custom-textfield">
-                  <TextField
-                    label="Coupon Claim Success Message"
-                    autoComplete="off"
-                  />
-                  <div className="value">
-                    <Text as="p">
-                      {"{{coupon_value:any}}"} -{">"} displays value of created
-                      coupon
-                    </Text>
-                  </div>
-                </div>
-                <div className="custom-textfield">
-                  <TextField
-                    label="Coupon Claim Failed Message"
-                    autoComplete="off"
-                  />
-                </div>
-              </Box>
-            </Collapsible>
-          </Box>
-          <div className="divider">
-            <Divider />
-          </div>
-          <Box padding="400">
-            <InlineStack align="space-between" blockAlign="center">
-              <div className="referral-link">
-                <Text as="p" variant="bodyLg">
-                  MESSAGES
-                </Text>
-              </div>
-              <div className="affiliate-button">
-                <Button
-                  variant="monochromePlain"
-                  onClick={toggleAMessagesCollapsible}
-                  ariaExpanded={isAMessageOpen}
-                  size="large"
-                  className="chevron-icon"
-                  ariaControls="affiliate-settings-collapsible"
-                >
-                  <Icon
-                    source={isAMessageOpen ? ChevronUpIcon : ChevronDownIcon}
-                  />
-                </Button>
-              </div>
-            </InlineStack>
-
-            <Collapsible
-              open={isAMessageOpen}
-              id="affiliate-settings-collapsible"
-              transition={{
-                duration: "500ms",
-                timingFunction: "ease-in-out",
-              }}
-              style={{ overflow: "visible" }}
-            >
-              <Box padding="400" paddingInline="400">
-                <div className="custom-textfield">
-                  <TextField
-                    label="Member blocked message"
-                    autoComplete="off"
-                  />
-                </div>
-                <div className="custom-textfield">
-                  <TextField
-                    label="Member programs disabled message"
-                    autoComplete="off"
-                  />
+                  <TextField label="Invalid OTP Message" autoComplete="off" />
                 </div>
               </Box>
             </Collapsible>
@@ -867,42 +525,39 @@ export default function Customize() {
                   CUSTOM CSS
                 </Text>
               </div>
-              <div className="affiliate-button">
+              <div className="referral-button">
                 <Button
                   variant="monochromePlain"
-                  onClick={toggleACustomcssCollapsible}
-                  ariaExpanded={isACustomcssOpen}
+                  onClick={toggleRewardCollapsible}
+                  ariaExpanded={isRewardOpen}
                   size="large"
                   className="chevron-icon"
-                  ariaControls="affiliate-settings-collapsible"
+                  ariaControls="page-title-collapsible"
                 >
-                  <Icon
-                    source={isACustomcssOpen ? ChevronUpIcon : ChevronDownIcon}
-                  />
+                  <Icon source={isRewardOpen ? ChevronUpIcon : ChevronDownIcon} />
                 </Button>
               </div>
             </InlineStack>
 
             <Collapsible
-              open={isACustomcssOpen}
-              id="affiliate-settings-collapsible"
+              open={isRewardOpen}
+              id="page-title-collapsible"
               transition={{
                 duration: "500ms",
                 timingFunction: "ease-in-out",
               }}
-              style={{ overflow: "visible" }}
             >
               <Box padding="400" paddingInline="400">
-                <div className="custom-textfield">
+                <div className="custom-textfield-desc">
                   <TextField label="Custom css" autoComplete="off" />
                 </div>
               </Box>
             </Collapsible>
           </Box>
         </div>
-      );
+      )
     }
-  };
+  }
 
   // Render right grid content based on selected tab
   const renderRightGridContent = () => {
@@ -910,38 +565,60 @@ export default function Customize() {
       // Send OTP tab
       return (
         <Box padding="400">
-            <div className="send-otp-text">
-            <Text as="h6" variant="headingLg">Login to referrer / affiliate dashboard</Text>
-            </div>
-            <div className="send-otp-text2">
-            <Text as="p" variant="bodyLg">Please enter your email address to receive the one-time verification code. NOTE: You will receive the code only if you are an approved member of our referral / affiliate program.</Text>
-            </div>
-            <div className="send-otp-textfield">
+          <div className="send-otp-text">
+            <Text as="h6" variant="headingLg">
+              Login to referrer / affiliate dashboard
+            </Text>
+          </div>
+          <div className="send-otp-text2">
+            <Text as="p" variant="bodyLg">
+              Please enter your email address to receive the one-time verification code. NOTE: You will receive the code
+              only if you are an approved member of our referral / affiliate program.
+            </Text>
+          </div>
+          <div className="send-otp-textfield">
             <TextField label="Your Email address" placeholder="Enter your email address" autoComplete="off"></TextField>
-            </div>
-            <div className="send-otp-btn">
-            <Button variant="primary" size="large">Send verification code</Button>
-            </div>
-            <div className="send-otp-text3">
-            <Text as="p" variant="bodyLg">Become an referral member</Text>
-            </div>
-            <div className="send-otp-text4">
-            <Text as="p"variant="bodyLg">Become an affiliate member</Text>
-            </div>
-            <div className="send-otp-text5">
-            <Text as="p" variant="bodyLg">Login</Text>
-            </div>
+          </div>
+          <div className="send-otp-btn">
+            <button className="verify-button2">
+              Send verification code
+            </button>
+          </div>
+          <div className="send-otp-text3">
+            <Text as="p" variant="bodyLg">
+              Become an referral member
+            </Text>
+          </div>
+          <div className="send-otp-text4">
+            <Text as="p" variant="bodyLg">
+              Become an affiliate member
+            </Text>
+          </div>
+          <div className="send-otp-text5">
+            <Text as="p" variant="bodyLg">
+              Login
+            </Text>
+          </div>
         </Box>
-      );
+      )
     } else {
       // Verify OTP tab
-      return (
-        <Box padding="400">
-         
-        </Box>
-      );
+      return <Box padding="400">
+        <div className="verify-otp-text1">
+        <Text as="h2" variant="headingLg">Verify your one time code</Text>
+        </div>
+        <div className="verify-otp-text2">
+        <Text as ="p" variant="bodyLg">We've sent a one-time verification code to your email address {`{{email_id}}`}. Please check your email inbox to get the code and enter it here to verify to access your referral / affiliate dashboard        </Text>
+        </div>
+        <div className="verify-otp-textfield">
+        <TextField label="Your verification code"></TextField>
+        </div>
+        <div className="verify-otp-btn">
+        <button className="verify-button">Verify</button>
+        </div>
+      </Box>
     }
-  };
+  }
 
   return (
     <div>
@@ -953,8 +630,8 @@ export default function Customize() {
       </div>
 
       <div className="translation-text1">
-        <Text as="h1" variant="headingLg">      
-            Customize OTP Page
+        <Text as="h1" variant="headingLg">
+          Customize OTP Page
         </Text>
       </div>
 
@@ -983,11 +660,7 @@ export default function Customize() {
             {/* Right Box Content */}
             <Card>
               <Box padding="400">
-                <Tabs
-                  tabs={tabs}
-                  selected={selectedTab}
-                  onSelect={handleTabChange}
-                />
+                <Tabs tabs={tabs} selected={selectedTab} onSelect={handleTabChange} />
                 {renderRightGridContent()}
               </Box>
             </Card>
@@ -995,5 +668,5 @@ export default function Customize() {
         </div>
       </Box>
     </div>
-  );
+  )
 }

@@ -402,8 +402,8 @@ input:checked + .slider:before {
 
 .custom-textfield {
   position: relative;
-  right: 18px;
-  width: 350px; 
+  right: 14px;
+  width: 330px; 
   max-width: 500px;
   margin-top: 2px;
 }
@@ -489,8 +489,8 @@ input:checked + .slider:before {
   position: relative;
   height: 530px;
   margin-top: 8px;
-  /* overflow-y: auto;   */
-  /* overflow-x: hidden; */
+  overflow-y: auto;  
+  overflow-x: hidden;
   scrollbar-width: thin; /* For Firefox: Makes the scrollbar slimmer */
   scrollbar-color: #b0b0b0 transparent; /* Custom scrollbar color */
   margin-right: -15px; /* Creates space on the right to push scrollbar */
@@ -811,13 +811,14 @@ margin-left: 220px;
 }
 
 .send-otp-btn{
-  padding-left: 285px;
+  padding-left: 30px;
   padding-top: 12px;
+  height: 10px;
 }
 
 .send-otp-text3{
   padding-left: 180px;
-  padding-top: 16px;
+  padding-top: 56px;
 }
 
 .send-otp-text4{
@@ -828,4 +829,132 @@ margin-left: 220px;
 
 .send-otp-text5{
   padding-left: 362px;
+}
+
+.custom-textfield-desc {
+  position: relative;
+  right: 14px;
+  width: 330px; 
+  max-width: 350px;
+  margin-top: 2px;
+}
+
+.custom-textfield-desc label {
+  margin-top: 8px;
+  display: block;
+}
+.custom-textfield-desc input {
+  height: 80px;
+  padding: 10px;
+}
+
+.checkbox-text{
+  padding-top: 8px;
+  padding-right: -4px
+}
+
+.verify-otp-text{
+  padding-top: 6px;
+  padding-left: -4px;
+}
+
+.verify-otp-text1{
+  padding-top: 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.verify-otp-text2{
+  padding-top: 14px;
+  text-align: center;
+}
+
+.verify-otp-textfield{
+  padding-top: 20px;
+  max-width: 500px;
+  padding-left: 230px;
+}
+
+.verify-otp-btn{
+  padding-top: 12px;
+}
+
+.verify-otp-textfield label {
+  font-size: 16px;
+}
+
+.verify-button {
+  display: block;
+  width: 20%;
+  max-width: 650px;
+  padding: 10px 16px;
+  margin: 0 auto;
+  background-color: #4e7df5;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s ease;
+}
+
+.verify-button:hover {
+  background-color: #3d6ce4;
+}
+
+.verify-button2 {
+  display: block;
+  width: 50%;
+  max-width: 195px;
+  padding: 10px 16px;
+  margin: 0 auto;
+  background-color: #4e7df5;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s ease;
+}
+
+.verify-button2:hover {
+  background-color: #3d6ce4;
+}
+
+.enable-referrer-new{
+  margin-left: 12px;
+  padding-top: 6px;
+}
+
+
+.enable-referrer-new .toggle-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.enable-referrer-new .toggle-label {
+  font-size: 14px;
+  color: #202223;
+}
+
+.klaviyo-grid2{
+  padding-left: 54px;
+  padding-top: 24px;
+}
+
+.klaviyo-grid{
+  padding-left: 16px;
+}
+
+.klaviyo-text{
+  padding-top: 5px;
 }
