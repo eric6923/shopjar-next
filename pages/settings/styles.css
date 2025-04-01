@@ -958,3 +958,18 @@ margin-left: 220px;
 .klaviyo-text{
   padding-top: 5px;
 }
+
+.enable-comission{
+  margin-right: 170px;
+}
+
+.enable-comission .toggle-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.enable-comission .toggle-label {
+  font-size: 14px;
+  color: #202223;
+}

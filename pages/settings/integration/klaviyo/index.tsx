@@ -113,9 +113,6 @@ export default function KlaviyoCredentials() {
               </BlockStack>
               </div>
             </Grid.Cell>
-            
-            {/* Empty cell for spacing at the end */}
-            {/* <Grid.Cell columnSpan={{ xs: 0, sm: 1, md: 1, lg: 1, xl: 1 }}></Grid.Cell> */}
           </Grid>
         </BlockStack>
       </Card>
