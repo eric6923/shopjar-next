@@ -5,9 +5,14 @@ import {
   Box,
   Text,
   BlockStack,
-  Card
+  Card,
+  Button
 } from '@shopify/polaris';
+import {
+  EditIcon
+} from '@shopify/polaris-icons';
 import ComissionTiers from './ComissionTiers';
+import router, { Router } from 'next/router';
 
 const VerticalTabsComponent = () => {
   const [selectedTab, setSelectedTab] = useState('commission-tiers');
@@ -37,8 +42,30 @@ const VerticalTabsComponent = () => {
       case 'affiliate-signup':
         return (
           <Box padding="400">
-            <Text variant="headingMd" as="h2">Affiliate Signup Form Content</Text>
-            <Text as="p">Customize your affiliate signup forms here.</Text>
+            <div className="affliate-signup-form">
+              <div className="affliate-signup-text1">
+            <Text as="h1" variant='headingLg'>Affiliate Signup Form</Text>
+            </div>
+            <div className="affliate-signup-card">
+            <Card>
+  <div className="affliate-card-1">
+    <Text as="h1" variant='headingMd'>Affiliate Sign-up form</Text>
+    <div className="affliate-signup-btn">
+      <Button icon={EditIcon} onClick={()=> router.push('/affliate/page/customize/default-affiliate-request-form-page-template')}></Button>
+    </div>
+  </div>
+  <div className="affliate-signup-text2">
+    <Text as="p" variant='bodyLg'>
+      Let people apply to become a member of your affiliate program. The form 
+      will help you capture the details of the potential affiliate members, 
+      review their application and approve them. It will be helpful to influencers, 
+      brand ambassadors and manage them effectively.
+    </Text>
+  </div>
+</Card>
+
+            </div>
+            </div>
           </Box>
         );
       case 'emails':

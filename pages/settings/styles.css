@@ -376,8 +376,8 @@ input:checked + .slider:before {
 
 .translation-text1{
   position: absolute;
-  left: 79px;
-  top: 28px;
+  left: 64px;
+  top: 26px;
 }
 
 .translation-buttongroup{
@@ -409,6 +409,32 @@ input:checked + .slider:before {
 }
 
 .custom-textfield label {
+  margin-top: 8px;
+  display: block;
+}
+
+.custom-checkbox{
+  position: relative;
+  right: 14px;
+  margin-top: 2px;
+}
+
+.custom-checkbox label{
+  margin-top: 8px;
+
+
+}
+
+
+.custom-textfield2 {
+  position: relative;
+  right: -18px;
+  width: 330px; 
+  max-width: 500px;
+  margin-top: 2px;
+}
+
+.custom-textfield2 label {
   margin-top: 8px;
   display: block;
 }
@@ -972,4 +998,47 @@ margin-left: 220px;
 .enable-comission .toggle-label {
   font-size: 14px;
   color: #202223;
+}
+
+.affliate-signup-form{
+  padding-top: 17px;
+}
+
+.affliate-signup-card{
+  padding-top: 24px;
+}
+
+.affliate-signup-text2{
+  padding-top: 6px;
+  max-width: 830px;
+}
+
+.affliate-card-1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Ensures vertical alignment */
+}
+
+.affliate-signup-btn {
+  margin-left: auto; /* Pushes the button to the right */
+  position: relative; /* Removes unnecessary positioning */
+  right: 40px;
+  top: 40px;
+}
+
+.customize{
+  padding-left: 6px;
+}
+
+.divider1{
+  margin-top: 16px;
+  padding-bottom: 12px;
+}
+
+.affliate-divider-space{
+  padding-top: 16px;
+}
+
+.affliate-pagetitle{
+  max-width: ;
 }
