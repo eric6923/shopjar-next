@@ -5,7 +5,7 @@ import React from 'react';
 export default function Integrations() {
   return (
     <Page fullWidth>
-      <Card sectioned>
+      <Card>
         <InlineStack gap="200" align="start">
           {/* Left - Thumbnail */}
           <Thumbnail
