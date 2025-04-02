@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { ChangeEvent, useCallback, useState } from 'react';
 import {InlineGrid, Text, InlineStack, Card, Collapsible, Box, TextField, Button, Icon, Divider, ButtonGroup, Thumbnail, DropZone} from '@shopify/polaris';
 import { ArrowLeftIcon, ChevronDownIcon, ChevronUpIcon } from '@shopify/polaris-icons';
 import router from 'next/router';
@@ -26,15 +26,16 @@ function Index() {
         setIsMessagesOpen(!isMessagesOpen);
       };
       
-    function handleFileChange(event: ChangeEvent<HTMLInputElement>): void {
-        throw new Error('Function not implemented.');
-    }
+    // function handleFileChange(event: ChangeEvent<HTMLInputElement>): void {
+    //     throw new Error('Function not implemented.');
+    // }
 
   return (
     <div className='div-heading'>
         <div className="translation-icon">
-    <Button variant="secondary" onClick={() => router.push("/settings")}>
-      <Icon source={ArrowLeftIcon} tone="base" />
+    <Button variant="secondary" onClick={() => router.push("/settings")}
+      icon={ArrowLeftIcon}
+      >
     </Button>
   </div>
 
@@ -54,7 +55,7 @@ function Index() {
   </div>
     <InlineGrid columns={['oneThird', 'twoThirds']}>
         <div className="card1">
-        <Card label="oneThird">
+        <Card>
             <Box padding="400">
                         <InlineStack align="space-between" blockAlign="center">
                           <Text as="p" variant="bodyLg">
@@ -66,12 +67,9 @@ function Index() {
                             onClick={togglePageTitleCollapsible}
                             ariaExpanded={isPageTitleOpen}
                             size="large"
-                            className="chevron-icon"
                             ariaControls="page-title-collapsible"
+                            icon={isPageTitleOpen ? ChevronUpIcon : ChevronDownIcon}
                           >
-                            <Icon
-                              source={isPageTitleOpen ? ChevronUpIcon : ChevronDownIcon}
-                            />
                           </Button>
                         </InlineStack>
             
@@ -82,14 +80,14 @@ function Index() {
                             duration: "500ms",
                             timingFunction: "ease-in-out",
                           }}
-                          style={{ overflow: "visible" }}
+                          // style={{ overflow: "visible" }}
                         >
                           <Box padding="400" paddingInline="400">
                             
                             <div className="custom-textfield">
                               <TextField label="Image URL" autoComplete="off" />
                               <div className="email-text1">
-                              <Text as="p" variant="bodgLg">Acceptable file types: JPG, PNG, JPEG</Text>
+                              <Text as="p" variant="bodyLg">Acceptable file types: JPG, PNG, JPEG</Text>
                               </div>
                             </div>
                             <div className="email-btn">
@@ -115,12 +113,9 @@ function Index() {
                                                   onClick={toggleReferralCollapsible}
                                                   ariaExpanded={isReferralOpen}
                                                   size="large"
-                                                  className="chevron-icon"
                                                   ariaControls="referral-link-collapsible"
+                                                  icon={isReferralOpen ? ChevronUpIcon : ChevronDownIcon}
                                                 >
-                                                  <Icon
-                                                    source={isReferralOpen ? ChevronUpIcon : ChevronDownIcon}
-                                                  />
                                                 </Button>
                                               </div>
                                             </InlineStack>
@@ -157,12 +152,9 @@ function Index() {
                                                   onClick={toggleStatsCollapsible}
                                                   ariaExpanded={isStatsOpen}
                                                   size="large"
-                                                  className="chevron-icon"
                                                   ariaControls="page-title-collapsible"
+                                                  icon={isStatsOpen ? ChevronUpIcon : ChevronDownIcon}
                                                 >
-                                                  <Icon
-                                                    source={isStatsOpen ? ChevronUpIcon : ChevronDownIcon}
-                                                  />
                                                 </Button>
                                               </div>
                                             </InlineStack>
@@ -174,7 +166,7 @@ function Index() {
                                                 duration: "500ms",
                                                 timingFunction: "ease-in-out",
                                               }}
-                                              style={{ overflow: "visible" }}
+                                              // style={{ overflow: "visible" }}
                                             >
                                               <Box padding="400" paddingInline="400">
                                                 <div className="custom-textfield">
@@ -200,12 +192,9 @@ function Index() {
                                                   onClick={toggleRewardCollapsible}
                                                   ariaExpanded={isRewardOpen}
                                                   size="large"
-                                                  className="chevron-icon"
                                                   ariaControls="page-title-collapsible"
+                                                  icon={isRewardOpen ? ChevronUpIcon : ChevronDownIcon}
                                                 >
-                                                  <Icon
-                                                    source={isRewardOpen ? ChevronUpIcon : ChevronDownIcon}
-                                                  />
                                                 </Button>
                                               </div>
                                             </InlineStack>
@@ -217,7 +206,7 @@ function Index() {
                                                 duration: "500ms",
                                                 timingFunction: "ease-in-out",
                                               }}
-                                              style={{ overflow: "visible" }}
+                                              // style={{ overflow: "visible" }}
                                             >
                                               <Box padding="400" paddingInline="400">
                                                 <div className="custom-textfield">
@@ -252,12 +241,9 @@ function Index() {
                                                   onClick={toggleMessagesCollapsible}
                                                   ariaExpanded={isMessagesOpen}
                                                   size="large"
-                                                  className="chevron-icon"
                                                   ariaControls="page-title-collapsible"
+                                                  icon={isMessagesOpen ? ChevronUpIcon : ChevronDownIcon}
                                                 >
-                                                  <Icon
-                                                    source={isMessagesOpen ? ChevronUpIcon : ChevronDownIcon}
-                                                  />
                                                 </Button>
                                               </div>
                                             </InlineStack>
@@ -287,7 +273,7 @@ function Index() {
         </Card>
         </div>
         <div className="card2">
-        <Card label="twoThirds">
+        <Card>
             
         <div className="inner-card">
         <Card>

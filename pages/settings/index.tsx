@@ -55,7 +55,7 @@ const SettingsPage = () => {
   };
 
   const handleSelectChange = useCallback(
-    (value: number) => setSelected(value),
+    (value: string) => setSelected(Number(value)),
     []
   );
 

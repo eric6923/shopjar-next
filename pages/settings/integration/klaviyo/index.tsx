@@ -73,7 +73,7 @@ export default function KlaviyoCredentials() {
           <Divider />
 
           {/* Grid layout with spacing adjustments */}
-          <Grid gap="800">
+          <Grid>
 
             {/* Left side content - now with 5 columns */}
             <Grid.Cell columnSpan={{ xs: 6, sm: 5, md: 5, lg: 5, xl: 5 }}>

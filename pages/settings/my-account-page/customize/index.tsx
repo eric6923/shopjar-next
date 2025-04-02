@@ -131,12 +131,9 @@ export default function Customize() {
                 onClick={togglePageTitleCollapsible}
                 ariaExpanded={isPageTitleOpen}
                 size="large"
-                className="chevron-icon"
                 ariaControls="page-title-collapsible"
-              >
-                <Icon
-                  source={isPageTitleOpen ? ChevronUpIcon : ChevronDownIcon}
-                />
+                icon={isPageTitleOpen ? ChevronUpIcon : ChevronDownIcon}
+              >   
               </Button>
             </InlineStack>
 
@@ -147,7 +144,7 @@ export default function Customize() {
                 duration: "500ms",
                 timingFunction: "ease-in-out",
               }}
-              style={{ overflow: "visible" }}
+              // style={{ overflow: "visible" }}
             >
               <Box padding="400" paddingInline="400">
                 <div className="custom-textfield">
@@ -182,15 +179,12 @@ export default function Customize() {
               <div className="referral-button">
                 <Button
                   variant="monochromePlain"
-                  onClick={toggleReferralCollapsible}
+                  onClick={()=>{}}
                   ariaExpanded={isReferralOpen}
                   size="large"
-                  className="chevron-icon"
                   ariaControls="referral-link-collapsible"
+                  icon={isReferralOpen ? ChevronUpIcon : ChevronDownIcon}
                 >
-                  <Icon
-                    source={isReferralOpen ? ChevronUpIcon : ChevronDownIcon}
-                  />
                 </Button>
               </div>
             </InlineStack>
@@ -232,12 +226,9 @@ export default function Customize() {
                   onClick={toggleStatsCollapsible}
                   ariaExpanded={isStatsOpen}
                   size="large"
-                  className="chevron-icon"
                   ariaControls="page-title-collapsible"
+                  icon={isStatsOpen ? ChevronUpIcon : ChevronDownIcon}
                 >
-                  <Icon
-                    source={isStatsOpen ? ChevronUpIcon : ChevronDownIcon}
-                  />
                 </Button>
               </div>
             </InlineStack>
@@ -249,7 +240,7 @@ export default function Customize() {
                 duration: "500ms",
                 timingFunction: "ease-in-out",
               }}
-              style={{ overflow: "visible" }}
+              // style={{ overflow: "visible" }}
             >
               <Box padding="400" paddingInline="400">
                 <div className="custom-textfield">
@@ -277,12 +268,9 @@ export default function Customize() {
                   onClick={toggleRewardCollapsible}
                   ariaExpanded={isRewardOpen}
                   size="large"
-                  className="chevron-icon"
                   ariaControls="page-title-collapsible"
+                  icon={isRewardOpen ? ChevronUpIcon : ChevronDownIcon}
                 >
-                  <Icon
-                    source={isRewardOpen ? ChevronUpIcon : ChevronDownIcon}
-                  />
                 </Button>
               </div>
             </InlineStack>
@@ -294,7 +282,7 @@ export default function Customize() {
                 duration: "500ms",
                 timingFunction: "ease-in-out",
               }}
-              style={{ overflow: "visible" }}
+              // style={{ overflow: "visible" }}
             >
               <Box padding="400" paddingInline="400">
                 <div className="custom-textfield">
@@ -337,12 +325,9 @@ export default function Customize() {
                   onClick={toggleMessagesCollapsible}
                   ariaExpanded={isMessagesOpen}
                   size="large"
-                  className="chevron-icon"
                   ariaControls="page-title-collapsible"
+                  icon={isMessagesOpen ? ChevronUpIcon : ChevronDownIcon}
                 >
-                  <Icon
-                    source={isMessagesOpen ? ChevronUpIcon : ChevronDownIcon}
-                  />
                 </Button>
               </div>
             </InlineStack>
@@ -387,12 +372,9 @@ export default function Customize() {
                   onClick={toggleCustomcssCollapsible}
                   ariaExpanded={isCustomcssOpen}
                   size="large"
-                  className="chevron-icon"
                   ariaControls="page-title-collapsible"
+                  icon={isCustomcssOpen ? ChevronUpIcon : ChevronDownIcon}
                 >
-                  <Icon
-                    source={isCustomcssOpen ? ChevronUpIcon : ChevronDownIcon}
-                  />
                 </Button>
               </div>
             </InlineStack>
@@ -429,12 +411,9 @@ export default function Customize() {
                 onClick={togglePageTitleCollapsible}
                 ariaExpanded={isPageTitleOpen}
                 size="large"
-                className="chevron-icon"
                 ariaControls="page-title-collapsible"
+                icon={isPageTitleOpen ? ChevronUpIcon : ChevronDownIcon}
               >
-                <Icon
-                  source={isPageTitleOpen ? ChevronUpIcon : ChevronDownIcon}
-                />
               </Button>
             </InlineStack>
 
@@ -478,12 +457,9 @@ export default function Customize() {
                   onClick={toggleReferralCollapsible}
                   ariaExpanded={isReferralOpen}
                   size="large"
-                  className="chevron-icon"
                   ariaControls="affiliate-settings-collapsible"
+                  icon={isReferralOpen ? ChevronUpIcon : ChevronDownIcon}
                 >
-                  <Icon
-                    source={isReferralOpen ? ChevronUpIcon : ChevronDownIcon}
-                  />
                 </Button>
               </div>
             </InlineStack>
@@ -495,7 +471,7 @@ export default function Customize() {
                 duration: "500ms",
                 timingFunction: "ease-in-out",
               }}
-              style={{ overflow: "visible" }}
+              // style={{ overflow: "visible" }}
             >
               <Box padding="400" paddingInline="400">
                 <div className="custom-textfield">
@@ -526,12 +502,9 @@ export default function Customize() {
                   onClick={toggleAstatsCollapsible}
                   ariaExpanded={isAstatsOpen}
                   size="large"
-                  className="chevron-icon"
                   ariaControls="affiliate-settings-collapsible"
+                  icon={isAstatsOpen ? ChevronUpIcon : ChevronDownIcon}
                 >
-                  <Icon
-                    source={isAstatsOpen ? ChevronUpIcon : ChevronDownIcon}
-                  />
                 </Button>
               </div>
             </InlineStack>
@@ -543,7 +516,7 @@ export default function Customize() {
                 duration: "500ms",
                 timingFunction: "ease-in-out",
               }}
-              style={{ overflow: "visible" }}
+              // style={{ overflow: "visible" }}
             >
               <Box padding="400" paddingInline="400">
                 <div className="custom-textfield">
@@ -589,12 +562,9 @@ export default function Customize() {
                   onClick={toggleAcouponsCollapsible}
                   ariaExpanded={isAcouponsOpen}
                   size="large"
-                  className="chevron-icon"
                   ariaControls="affiliate-settings-collapsible"
+                  icon={isAcouponsOpen ? ChevronUpIcon : ChevronDownIcon}
                 >
-                  <Icon
-                    source={isAcouponsOpen ? ChevronUpIcon : ChevronDownIcon}
-                  />
                 </Button>
               </div>
             </InlineStack>
@@ -606,7 +576,7 @@ export default function Customize() {
                 duration: "500ms",
                 timingFunction: "ease-in-out",
               }}
-              style={{ overflow: "visible" }}
+              // style={{ overflow: "visible" }}
             >
               <Box padding="400" paddingInline="400">
                 <div className="custom-textfield">
@@ -634,12 +604,9 @@ export default function Customize() {
                   onClick={toggleApaypalCollapsible}
                   ariaExpanded={isApaypalOpen}
                   size="large"
-                  className="chevron-icon"
                   ariaControls="affiliate-settings-collapsible"
+                  icon={isApaypalOpen ? ChevronUpIcon : ChevronDownIcon}
                 >
-                  <Icon
-                    source={isApaypalOpen ? ChevronUpIcon : ChevronDownIcon}
-                  />
                 </Button>
               </div>
             </InlineStack>
@@ -651,7 +618,7 @@ export default function Customize() {
                 duration: "500ms",
                 timingFunction: "ease-in-out",
               }}
-              style={{ overflow: "visible" }}
+              // style={{ overflow: "visible" }}
             >
               <Box padding="400" paddingInline="400">
                 <div className="custom-textfield">
@@ -697,14 +664,9 @@ export default function Customize() {
                   onClick={toggleACTransactionCollapsible}
                   ariaExpanded={isACTransactionOpen}
                   size="large"
-                  className="chevron-icon"
                   ariaControls="affiliate-settings-collapsible"
+                  icon={isACTransactionOpen ? ChevronUpIcon : ChevronDownIcon}
                 >
-                  <Icon
-                    source={
-                      isACTransactionOpen ? ChevronUpIcon : ChevronDownIcon
-                    }
-                  />
                 </Button>
               </div>
             </InlineStack>
@@ -716,7 +678,7 @@ export default function Customize() {
                 duration: "500ms",
                 timingFunction: "ease-in-out",
               }}
-              style={{ overflow: "visible" }}
+              // style={{ overflow: "visible" }}
             >
               <Box padding="400" paddingInline="400">
                 <div className="custom-textfield">
@@ -756,12 +718,9 @@ export default function Customize() {
                   onClick={toggleACCouponCollapsible}
                   ariaExpanded={isACCouponOpen}
                   size="large"
-                  className="chevron-icon"
                   ariaControls="affiliate-settings-collapsible"
+                  icon={isACCouponOpen ? ChevronUpIcon : ChevronDownIcon}
                 >
-                  <Icon
-                    source={isACCouponOpen ? ChevronUpIcon : ChevronDownIcon}
-                  />
                 </Button>
               </div>
             </InlineStack>
@@ -773,7 +732,7 @@ export default function Customize() {
                 duration: "500ms",
                 timingFunction: "ease-in-out",
               }}
-              style={{ overflow: "visible" }}
+              // style={{ overflow: "visible" }}
             >
               <Box padding="400" paddingInline="400">
                 <div className="custom-textfield">
@@ -822,12 +781,9 @@ export default function Customize() {
                   onClick={toggleAMessagesCollapsible}
                   ariaExpanded={isAMessageOpen}
                   size="large"
-                  className="chevron-icon"
                   ariaControls="affiliate-settings-collapsible"
+                  icon={isAMessageOpen ? ChevronUpIcon : ChevronDownIcon}
                 >
-                  <Icon
-                    source={isAMessageOpen ? ChevronUpIcon : ChevronDownIcon}
-                  />
                 </Button>
               </div>
             </InlineStack>
@@ -839,7 +795,7 @@ export default function Customize() {
                 duration: "500ms",
                 timingFunction: "ease-in-out",
               }}
-              style={{ overflow: "visible" }}
+              // style={{ overflow: "visible" }}
             >
               <Box padding="400" paddingInline="400">
                 <div className="custom-textfield">
@@ -873,12 +829,9 @@ export default function Customize() {
                   onClick={toggleACustomcssCollapsible}
                   ariaExpanded={isACustomcssOpen}
                   size="large"
-                  className="chevron-icon"
                   ariaControls="affiliate-settings-collapsible"
+                  icon={isACustomcssOpen ? ChevronUpIcon : ChevronDownIcon}
                 >
-                  <Icon
-                    source={isACustomcssOpen ? ChevronUpIcon : ChevronDownIcon}
-                  />
                 </Button>
               </div>
             </InlineStack>
@@ -890,7 +843,7 @@ export default function Customize() {
                 duration: "500ms",
                 timingFunction: "ease-in-out",
               }}
-              style={{ overflow: "visible" }}
+              // style={{ overflow: "visible" }}
             >
               <Box padding="400" paddingInline="400">
                 <div className="custom-textfield">
@@ -919,6 +872,8 @@ export default function Customize() {
                   </Text>
                 </div>
                 <TextField
+                label=""
+                autoComplete="off"
                   suffix={
                     <div className="copy-icon">
                       <svg
@@ -1216,6 +1171,8 @@ export default function Customize() {
                   </Text>
                 </div>
                 <TextField
+                label=""
+                autoComplete="off"
                   suffix={
                     <div className="copy-icon">
                       <svg
@@ -1561,6 +1518,8 @@ export default function Customize() {
               <Text as="p">Your affiliate coupons</Text>
               <div className="input">
                 <TextField
+                label=""
+                autoComplete="off"
                   suffix={
                     <div className="copy-icon">
                       <svg
@@ -1636,7 +1595,7 @@ export default function Customize() {
                           Enter your PayPal email address to receive payouts.
                         </Text>
                         <div className="paypal-textfield">
-                          <TextField></TextField>
+                          <TextField label="" autoComplete="off"></TextField>
                         </div>
                         <div className="paypal-btn">
                           <Button variant="primary">Confirm</Button>
@@ -1738,8 +1697,9 @@ export default function Customize() {
     <div>
       {/* Navigation and Header Section */}
       <div className="translation-icon">
-        <Button variant="secondary" onClick={() => router.push("/settings")}>
-          <Icon source={ArrowLeftIcon} tone="base" />
+        <Button variant="secondary" onClick={() => router.push("/settings")}
+          icon={ArrowLeftIcon}
+          >
         </Button>
       </div>
 

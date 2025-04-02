@@ -45,8 +45,9 @@ export default function index() {
   return (
     <div>
       <div className="translation-icon">
-        <Button variant="secondary" onClick={() => router.push("/settings")}>
-          <Icon source={ArrowLeftIcon} tone="base" />
+        <Button variant="secondary" onClick={() => router.push("/settings")}
+          icon={ArrowLeftIcon}
+          >
         </Button>
       </div>
       <div className="translation-text1">

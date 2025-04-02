@@ -16,7 +16,7 @@ export default function TabsFittedExample() {
           </Grid.Cell>
           <Grid.Cell columnSpan={{ xs: 6, sm: 3, md: 3, lg: 6, xl: 6 }}>
             <div className="referral-grid-input"></div>
-            <TextField></TextField>
+            <TextField label="" autoComplete="off"></TextField>
           </Grid.Cell>
           <Grid.Cell columnSpan={{xs: 6, sm: 3, md: 3, lg: 6, xl: 6}}>
                     <div className="referral-grid-text">
@@ -25,7 +25,7 @@ export default function TabsFittedExample() {
                     </Grid.Cell>
                     <Grid.Cell columnSpan={{xs: 6, sm: 3, md: 3, lg: 6, xl: 6}}>
                       <div className="referral-grid-input"></div>
-                        <TextField></TextField>
+                        <TextField label="" autoComplete="off"></TextField>
                       
                     </Grid.Cell>
                     <Grid.Cell columnSpan={{xs: 6, sm: 3, md: 3, lg: 6, xl: 6}}>
@@ -35,7 +35,7 @@ export default function TabsFittedExample() {
                     </Grid.Cell>
                     <Grid.Cell columnSpan={{xs: 6, sm: 3, md: 3, lg: 6, xl: 6}}>
                       <div className="referral-grid-input"></div>
-                        <TextField></TextField>
+                        <TextField label="" autoComplete="off"></TextField>
                       
                     </Grid.Cell>
                     
