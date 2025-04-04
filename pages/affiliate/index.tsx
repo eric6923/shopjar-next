@@ -12,6 +12,11 @@ import { EditIcon } from "@shopify/polaris-icons";
 import ComissionTiers from "./ComissionTiers";
 import router, { Router } from "next/router";
 import Emails from "./Emails";
+import Sales from "./Sales";
+import CommissionEarnings from "./CommissionEarnings";
+import Payouts from "./Payouts";
+import PaymentMethods from "./PaymentMethods";
+import Settings from "./Settings";
 
 const VerticalTabsComponent = () => {
   const [selectedTab, setSelectedTab] = useState("commission-tiers");
@@ -38,13 +43,8 @@ const VerticalTabsComponent = () => {
         return <ComissionTiers />;
       case "affiliate-signup":
         return (
+          <Page title="Affiliate Signup Form">
           <Box padding="400">
-            <div className="affliate-signup-form">
-              <div className="affliate-signup-text1">
-                <Text as="h1" variant="headingLg">
-                  Affiliate Signup Form
-                </Text>
-              </div>
               <div className="affliate-signup-card">
                 <Card>
                   <div className="affliate-card-1">
@@ -56,7 +56,7 @@ const VerticalTabsComponent = () => {
                         icon={EditIcon}
                         onClick={() =>
                           router.push(
-                            "/affliate/page/customize/default-affiliate-request-form-page-template"
+                            "/affiliate/page/customize/default-affiliate-request-form-page-template"
                           )
                         }
                       ></Button>
@@ -73,8 +73,8 @@ const VerticalTabsComponent = () => {
                   </div>
                 </Card>
               </div>
-            </div>
           </Box>
+          </Page>
         );
       case "emails":
         return (
@@ -85,50 +85,31 @@ const VerticalTabsComponent = () => {
       case "sales":
         return (
           <Box padding="400">
-            <Text variant="headingMd" as="h2">
-              Sales Content
-            </Text>
-            <Text as="p">Track and manage affiliate sales here.</Text>
+            <Sales/>
           </Box>
         );
       case "commission-earnings":
         return (
           <Box padding="400">
-            <Text variant="headingMd" as="h2">
-              Commission Earnings Content
-            </Text>
-            <Text as="p">View and manage affiliate commission earnings.</Text>
+            <CommissionEarnings/>
           </Box>
         );
       case "payouts":
         return (
           <Box padding="400">
-            <Text variant="headingMd" as="h2">
-              Payouts Content
-            </Text>
-            <Text as="p">Manage affiliate payouts and payment history.</Text>
+            <Payouts/>
           </Box>
         );
       case "payment-methods":
         return (
           <Box padding="400">
-            <Text variant="headingMd" as="h2">
-              Payment Methods Content
-            </Text>
-            <Text as="p">
-              Configure available payment methods for affiliates.
-            </Text>
+            <PaymentMethods/>
           </Box>
         );
       case "settings":
         return (
           <Box padding="400">
-            <Text variant="headingMd" as="h2">
-              Settings Content
-            </Text>
-            <Text as="p">
-              Configure general settings for your affiliate program.
-            </Text>
+            <Settings/>
           </Box>
         );
       default:

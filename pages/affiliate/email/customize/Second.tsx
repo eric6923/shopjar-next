@@ -22,6 +22,7 @@ import {
 import router from "next/router";
 
 function Index() {
+  const [isChecked, setIsChecked] = useState(false);
   const [isPageTitleOpen, setIsPageTitleOpen] = useState(false);
   const [isReferralOpen, setIsReferralOpen] = useState(false);
   const [isStatsOpen, setIsStatsOpen] = useState(false);
@@ -48,21 +49,30 @@ function Index() {
       <div className="translation-icon">
         <Button
           variant="secondary"
-          onClick={() => router.push("/affliate")}
+          onClick={() => router.push("/affiliate")}
           icon={ArrowLeftIcon}
         ></Button>
       </div>
 
       <div className="translation-text1">
-        <Text as="h1" variant="headingLg">
-          Customize Email Template - Notify administrators when an affiliate
-          sale is made
-          <label className="toggle-switch2">
-            <input type="checkbox" defaultChecked />
-            <span className="slider round"></span>
-          </label>
+      <Text as="h1" variant="headingLg">
+        Customize Email Template - Notify administrators when an affiliate application is received
+        <label className="toggle-switch2">
+          <input
+            type="checkbox"
+            checked={isChecked}
+            onChange={() => setIsChecked(!isChecked)}
+          />
+          <span className="slider round"></span>
+        </label>
+        <div className="second-toggle-text">
+        <Text as="p" variant="bodyLg">
+          {isChecked ? "Live" : "Draft"}
         </Text>
-      </div>
+        </div>
+      </Text>
+      
+    </div>
 
       <div className="translation-buttongroup">
         <ButtonGroup>
@@ -153,11 +163,11 @@ function Index() {
                     <Text as="h6" variant="headingSm">
                       Short codes available
                     </Text>
-                    <Text as="p">{`{{affiliate_name}} -> Displays affiliate first and last name
-{{affiliate_first_name}} -> Displays affiliate first name
-{{affiliate_last_name}} -> Displays affiliate last name
-{{order_value}} -> Displays the order value
-{{sales_url}} -> Displays the all sales URL`}</Text>
+                    <Text as="p">{`{{affiliate_name}} -> Displays affiliates first and last name
+{{affiliate_first_name}} -> Displays affiliates first name
+{{affiliate_last_name}} -> Displays affiliates last name
+{{store_name}} -> Displays store name
+{{store_url}} -> Displays store URL`}</Text>
                   </div>
                 </Box>
               </Collapsible>
@@ -236,11 +246,11 @@ function Index() {
                     <Text as="h6" variant="headingSm">
                       Short codes available
                     </Text>
-                    <Text as="p">{`{{affiliate_name}} -> Displays affiliate first and last name
-{{affiliate_first_name}} -> Displays affiliate first name
-{{affiliate_last_name}} -> Displays affiliate last name
-{{order_value}} -> Displays the order value
-{{sales_url}} -> Displays the all sales URL`}</Text>
+                    <Text as="p">{`{{affiliate_name}} -> Displays affiliates first and last name
+{{affiliate_first_name}} -> Displays affiliates first name
+{{affiliate_last_name}} -> Displays affiliates last name
+{{store_name}} -> Displays store name
+{{store_url}} -> Displays store URL`}</Text>
                   </div>
                 </Box>
               </Collapsible>
@@ -298,19 +308,25 @@ function Index() {
                     width={50}
                   />
                 </div>
-                <div className="affiliate-card2-text1">
+                <div className="second-card2-text1">
                   <Text as="h1" variant="headingMd">
-                  You have new sale
+                  Affiliate request.
+
                   </Text>
                 </div>
-                <div className="card2-text2">
+                <div className="second-text2">
                   <Text as="p" variant="bodyMd">
-                  {`You have got a sale through {{affiliate_name}} and their purchase order value is {{order_value}}`}
+                  Hello,
                   </Text>
                 </div>
                 <div className="card2-text3">
                   <Text as="p" variant="bodyMd">
-                  {`To view all sales {{sales_url}}`}
+                  {`Your have an affiliate request to the shop {{store_url}}`}
+                  </Text>
+                </div>
+                <div className="card2-text3">
+                  <Text as="p" variant="bodyMd">
+                  Thank you.
                   </Text>
                 </div>
               </Card>

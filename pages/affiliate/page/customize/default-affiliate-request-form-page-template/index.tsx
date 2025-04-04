@@ -280,7 +280,7 @@ function Index() {
       <div className="translation-icon">
         <Button
           variant="secondary"
-          onClick={() => router.push("/affliate")}
+          onClick={() => router.push("/affiliate")}
           icon={ArrowLeftIcon}
         ></Button>
       </div>

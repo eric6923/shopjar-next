@@ -1023,7 +1023,7 @@ margin-left: 220px;
 }
 
 .affliate-signup-card{
-  padding-top: 24px;
+  padding-top: 4px;
 }
 
 .affliate-signup-text2{
@@ -1257,4 +1257,131 @@ margin-left: 220px;
 
 .affiliate-card2-text1{
   margin-left: 262px;
+}
+
+.second-text2{
+  margin-left: 270px;
+}
+
+.second-card2-text1{
+  margin-left: 270px;
+}
+
+.second-toggle-text{
+  position: relative;
+  left: 915px;
+  top: -21px;
+}
+
+.second-toggle-text1{
+  position: relative;
+  left: 825px;
+  top: -20px;
+}
+
+.affliate-card2-text3{
+  margin-left: 270px;
+}
+
+.second-toggle-text2{
+  position: relative;
+  left: 755px;
+  top: -20px;
+}
+
+.affliate-fourth{
+  margin-left: 270px;
+}
+
+.affliate-fourth-text1{
+  margin-left: 263px;
+}
+
+.affliate-fourth-text2{
+  margin-left: 263px;
+}
+.affliate-fourth-text3{
+  margin-left: 263px;
+}
+.affliate-fourth-text4{
+  margin-left: 263px;
+}
+.affliate-fourth-text5{
+  margin-left: 275px;
+  position: relative;
+  top: 50px;
+}
+
+.affiliate-fifth-text1{
+  margin-left: 200px;
+}
+
+.affliate-fifth-text2{
+  margin-left: 200px;
+  padding-top: 4px;
+}
+
+.affliate-fifth-text3{
+  margin-left: 200px;
+  padding-top: 4px;
+}
+.affliate-fifth-text4{
+  margin-left: 200px;
+  padding-top: 4px;
+}
+.affliate-fifth-text5{
+  margin-left: 200px;
+  padding-top: 4px;
+}
+.affliate-fifth-text6{
+  margin-left: 200px;
+  padding-top: 4px;
+}
+
+.sixth-toggle-text1{
+  position: relative;
+  left: 820px;
+  top: -20px;
+}
+
+.affiliate-sixth-text1{
+  margin-left: 155px;
+}
+.affliate-sixth-text2{
+  margin-left: 155px;
+  padding-top: 4px;
+}
+.affliate-sixth-text3{
+  margin-left: 155px;
+  padding-top: 4px;
+}
+.affliate-sixth-text4{
+  margin-left: 155px;
+  padding-top: 4px;
+}
+.affliate-sixth-text5{
+  margin-left: 155px;
+  padding-top: 4px;
+}
+.affliate-sixth-text6{
+  margin-left: 155px;
+  padding-top: 4px;
+}
+
+.sales-textfield{
+  display: flex;
+  justify-content: end;
+}
+
+.affliate-payment{
+  max-width: 880px;
+  padding-top: 2px;
+}
+
+.affliate-paypal{
+  padding-top: 2px;
+}
+
+.affliate-trem{
+  padding-top: 8px;
 }

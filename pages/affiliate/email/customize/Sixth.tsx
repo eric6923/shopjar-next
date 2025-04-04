@@ -22,6 +22,7 @@ import {
 import router from "next/router";
 
 function Index() {
+  const [isChecked, setIsChecked] = useState(false);
   const [isPageTitleOpen, setIsPageTitleOpen] = useState(false);
   const [isReferralOpen, setIsReferralOpen] = useState(false);
   const [isStatsOpen, setIsStatsOpen] = useState(false);
@@ -48,20 +49,30 @@ function Index() {
       <div className="translation-icon">
         <Button
           variant="secondary"
-          onClick={() => router.push("/affliate")}
+          onClick={() => router.push("/affiliate")}
           icon={ArrowLeftIcon}
         ></Button>
       </div>
 
       <div className="translation-text1">
-        <Text as="h1" variant="headingLg">
-        Customize Email Template - Notify administrators when an affiliate application is received
-          <label className="toggle-switch2">
-            <input type="checkbox" defaultChecked />
-            <span className="slider round"></span>
-          </label>
-        </Text>
-      </div>
+            <Text as="h1" variant="headingLg">
+            Customize Email Template - Notify when commission is redeemed as a coupon
+              <label className="toggle-switch2">
+                <input
+                  type="checkbox"
+                  checked={isChecked}
+                  onChange={() => setIsChecked(!isChecked)}
+                />
+                <span className="slider round"></span>
+              </label>
+              <div className="sixth-toggle-text1">
+              <Text as="p" variant="bodyLg">
+                {isChecked ? "Live" : "Draft"}
+              </Text>
+              </div>
+            </Text>
+            
+          </div>
 
       <div className="translation-buttongroup">
         <ButtonGroup>
@@ -152,11 +163,12 @@ function Index() {
                     <Text as="h6" variant="headingSm">
                       Short codes available
                     </Text>
-                    <Text as="p">{`{{affiliate_name}} -> Displays affiliate first and last name
-{{affiliate_first_name}} -> Displays affiliate first name
-{{affiliate_last_name}} -> Displays affiliate last name
-{{order_value}} -> Displays the order value
-{{sales_url}} -> Displays the all sales URL`}</Text>
+                    <Text as="p">{`{{affiliate_dashboard_url}} -> Member's Account Page Url
+{{affiliate_name}} -> Displays affiliates first and last name
+{{affiliate_first_name}} -> Displays affiliates first name
+{{affiliate_last_name}} -> Displays affiliates last name
+{{coupon_code}} -> Displays reward Coupon
+{{affiliate_url}} -> Displays store URL`}</Text>
                   </div>
                 </Box>
               </Collapsible>
@@ -235,11 +247,12 @@ function Index() {
                     <Text as="h6" variant="headingSm">
                       Short codes available
                     </Text>
-                    <Text as="p">{`{{affiliate_name}} -> Displays affiliate first and last name
-{{affiliate_first_name}} -> Displays affiliate first name
-{{affiliate_last_name}} -> Displays affiliate last name
-{{order_value}} -> Displays the order value
-{{sales_url}} -> Displays the all sales URL`}</Text>
+                    <Text as="p">{`{{affiliate_dashboard_url}} -> Member's Account Page Url
+{{affiliate_name}} -> Displays affiliates first and last name
+{{affiliate_first_name}} -> Displays affiliates first name
+{{affiliate_last_name}} -> Displays affiliates last name
+{{coupon_code}} -> Displays reward Coupon
+{{affiliate_url}} -> Displays store URL`}</Text>
                   </div>
                 </Box>
               </Collapsible>
@@ -297,28 +310,46 @@ function Index() {
                     width={50}
                   />
                 </div>
-                <div className="affiliate-card2-text1">
+                <div className="affiliate-sixth-text1">
                   <Text as="h1" variant="headingMd">
-                  Affiliate request.
-
+                  Your affiliate payout has been converted as coupon
                   </Text>
                 </div>
-                <div className="card2-text2">
+                <div className="affliate-sixth-text3">
                   <Text as="p" variant="bodyMd">
-                  Hello,
+                  Your affiliate payout has been converted as coupon
                   </Text>
                 </div>
-                <div className="card2-text3">
+                <div className="affliate-sixth-text4">
                   <Text as="p" variant="bodyMd">
-                  {`Your have an affiliate request to the shop {{store_url}}`}
+                  {`Hey {{affiliate_name}},`}
                   </Text>
                 </div>
-                <div className="card2-text3">
+                <div className="affliate-sixth-text5">
                   <Text as="p" variant="bodyMd">
-                  Thank you.
+                  {`We've converted your affiliate payout as coupon {{coupon_code}}, You can use this in your next purchase. Thank you for your continued support.`}
                   </Text>
                 </div>
+                <div className="affliate-sixth-text6">
+                  <Text as="p" variant="bodyMd">
+                  {`Keep referring more and earn more`}
+                  </Text>
+                </div>
+                <div className="affliate-sixth-text6">
+                  <Text as="p" variant="bodyMd">
+                  {`Your affiliate referral link is: {{affiliate_url}}`}
+                  </Text>
+                </div>
+                <div className="affliate-sixth-text6">
+                  <Text as="p" variant="bodyMd">
+                  {`For more information visit this URL: {{affiliate_dashboard_url}}`}
+                  </Text>
+                </div>
+ 
               </Card>
+              <div className="affliate-fourth-text5">
+                <Text as="p" variant="bodyMd">Thank you for shopping with us</Text>
+                </div>
             </div>
           </Card>
         </div>

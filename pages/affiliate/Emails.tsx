@@ -52,42 +52,42 @@ export default function EmailManagement() {
       title: 'Notify administrators when an affiliate sale is made',
       subject: 'You\'ve made a successful sale!',
       type: 'Admin',
-      editRoute: 'affliate/email/customize/default-email-template?type=AFFILIATE_SALES_EMAIL'
+      editRoute: 'affiliate/email/customize/default-email-template?type=AFFILIATE_SALES_EMAIL'
     },
     {
       id: '2',
       title: 'Notify administrators when an affiliate application is received',
       subject: 'You\'ve an affiliate request',
       type: 'Admin',
-      editRoute: 'affliate/email/customize/default-email-template?type=FOR_AFFILIATE_REQUEST'
+      editRoute: 'affiliate/email/customize/default-email-template?type=FOR_AFFILIATE_REQUEST'
     },
     {
       id: '3',
       title: 'Notify the affiliate when his application is approved',
       subject: 'You\'re approved for an affiliate program',
       type: 'Affiliate',
-      editRoute: '/emails/affiliate-approval-notification'
+      editRoute: 'affiliate/email/customize/default-email-template?type=FOR_AFFILIATE_REQUEST_APPROVAL'
     },
     {
       id: '4',
       title: 'Notify when an affiliate earns a commission',
       subject: 'You Earned a reward',
       type: 'Affiliate',
-      editRoute: '/emails/affiliate-commission-notification'
+      editRoute: 'affiliate/email/customize/default-email-template?type=FOR_AFFILIATE_REWARD'
     },
     {
         id: '5',
         title: 'Notify when payout is processed for an affiliate',
         subject: 'You\'re credited in your account.',
         type: 'Affiliate',
-        editRoute: '/emails/affiliate-commission-notification'
+        editRoute: 'affiliate/email/customize/default-email-template?type=FOR_AFFILIATE_PAYMENT'
       },
       {
         id: '6',
         title: 'Notify when commission is redeemed as a coupon',
         subject: 'You\'ve made a successful sale!',
         type: 'Affiliate',
-        editRoute: '/emails/affiliate-commission-notification'
+        editRoute: 'affiliate/email/customize/default-email-template?type=FOR_AFFILIATE_COUPON_COMMISSION'
       },
   ];
 
