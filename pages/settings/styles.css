@@ -275,7 +275,6 @@ input:checked + .slider:before {
 
 .toggle-switch2 {
   position: relative;
-  left: 25px;
   top: 2px;
   display: inline-block;
   width: 44px;
@@ -1384,4 +1383,71 @@ margin-left: 220px;
 
 .affliate-trem{
   padding-top: 8px;
+}
+
+.tremendous-grid2{
+  padding-left: 54px;
+  padding-top: 24px;
+}
+
+.tremendus-txtfield{
+  width: 450px;
+  max-width: 850px;
+}
+
+.tremendus-btn{
+  padding-top: 25px;
+  padding-left: 4px;
+}
+
+.tremendus-text{
+  padding-top: 9px;
+}
+
+.affliate-settings-text{
+  padding-top: 14px;
+  padding-left: 6px;
+}
+
+.toogle-switch-affliate{
+  position: relative;
+  left: 85px;
+}
+
+.affliate-settings-wrapper {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.affliate-settings-text-1 {
+  max-width: 220px; 
+}
+
+.affliate-settings-card {
+  flex: 1;
+  max-width: 750px;
+}
+
+.settings-affliate-select{
+  padding-top: 6px;
+}
+
+.settings-affilate-text{
+  max-width: 850px;
+  width: 600px;
+  padding-top: 4px;
+}
+
+.affliate-settings-textfield2{
+  max-width: 450px;
+  width: 150px;
+  padding-top: 18px;
+}
+
+.affliate-settings-textfield3{
+  max-width: 450px;
+  padding-top: 18px;
+  width: 450px;
 }
