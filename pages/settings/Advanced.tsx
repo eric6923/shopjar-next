@@ -1,8 +1,9 @@
-import { Page, Grid, Text, Button } from '@shopify/polaris';
-import React, { useState } from 'react';
+import { Page, Grid, Text, Button } from "@shopify/polaris";
+import React, { useState } from "react";
 
 export default function Advanced() {
-  const [isReferralSaleTagEnabled, setIsReferralSaleTagEnabled] = useState(false);
+  const [isReferralSaleTagEnabled, setIsReferralSaleTagEnabled] =
+    useState(false);
 
   return (
     <Page fullWidth>
@@ -13,7 +14,8 @@ export default function Advanced() {
               IP Fraud Detection (Advanced)
             </Text>
             <Text as="p" variant="bodyLg">
-              Brand the emails sent for your referral and affiliate program members with your own sending email domain name.
+              Brand the emails sent for your referral and affiliate program
+              members with your own sending email domain name.
             </Text>
           </div>
         </Grid.Cell>
@@ -21,15 +23,17 @@ export default function Advanced() {
           <div className="enable-referrer-advanced">
             <div className="toggle-container-advanced">
               <label className="toggle-switch">
-                <input 
-                  type="checkbox" 
-                  checked={isReferralSaleTagEnabled} 
-                  onChange={(e) => setIsReferralSaleTagEnabled(e.target.checked)} // ✅ Now it works
+                <input
+                  type="checkbox"
+                  checked={isReferralSaleTagEnabled}
+                  onChange={(e) =>
+                    setIsReferralSaleTagEnabled(e.target.checked)
+                  } // ✅ Now it works
                 />
                 <span className="slider round"></span>
               </label>
-              <Text as="p" variant='bodyLg'>
-                {isReferralSaleTagEnabled ? 'Enabled' : 'Disabled'}
+              <Text as="p" variant="bodyLg">
+                {isReferralSaleTagEnabled ? "Enabled" : "Disabled"}
               </Text>
             </div>
           </div>

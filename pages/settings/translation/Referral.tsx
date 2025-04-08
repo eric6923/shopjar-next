@@ -51,73 +51,79 @@ export default function TabsFittedExample() {
             <div className="referral-grid-input"></div>
             <TextField label="" autoComplete="off"></TextField>
           </Grid.Cell>
-          <Grid.Cell columnSpan={{xs: 6, sm: 3, md: 3, lg: 6, xl: 6}}>
-                    <div className="referral-grid-text">
-                        <Text as="p" variant="bodyLg">Failed to create coupon</Text>
-                        </div>
-                    </Grid.Cell>
-                    <Grid.Cell columnSpan={{xs: 6, sm: 3, md: 3, lg: 6, xl: 6}}>
-                      <div className="referral-grid-input"></div>
-                        <TextField label="" autoComplete="off"></TextField>
-                      
-                    </Grid.Cell>
-                    <Grid.Cell columnSpan={{xs: 6, sm: 3, md: 3, lg: 6, xl: 6}}>
-                    <div className="referral-grid-text">
-                        <Text as="p" variant="bodyLg">Failed to create member</Text>
-                        </div>
-                    </Grid.Cell>
-                    <Grid.Cell columnSpan={{xs: 6, sm: 3, md: 3, lg: 6, xl: 6}}>
-                      <div className="referral-grid-input"></div>
-                        <TextField label="" autoComplete="off"></TextField>
-                      
-                    </Grid.Cell>
-                    <Grid.Cell columnSpan={{xs: 6, sm: 3, md: 3, lg: 6, xl: 6}}>
-                    <div className="referral-grid-text">
-                        <Text as="p" variant="bodyLg">Invalid token</Text>
-                        </div>
-                    </Grid.Cell>
-                    <Grid.Cell columnSpan={{xs: 6, sm: 3, md: 3, lg: 6, xl: 6}}>
-                      <div className="referral-grid-input"></div>
-                        <TextField label="" autoComplete="off"></TextField>
-                      
-                    </Grid.Cell>
-                    <Grid.Cell columnSpan={{xs: 6, sm: 3, md: 3, lg: 6, xl: 6}}>
-                    <div className="referral-grid-text">
-                        <Text as="p" variant="bodyLg">Referral reward is not available for existing customers. It appears you already an existing customer in our store</Text>
-                        </div>
-                    </Grid.Cell>
-                    <Grid.Cell columnSpan={{xs: 6, sm: 3, md: 3, lg: 6, xl: 6}}>
-                      <div className="referral-grid-input"></div>
-                        <TextField label="" autoComplete="off"></TextField>
-                      
-                    </Grid.Cell>
-                    <Grid.Cell columnSpan={{xs: 6, sm: 3, md: 3, lg: 6, xl: 6}}>
-                    <div className="referral-grid-text">
-                        <Text as="p" variant="bodyLg">You can't use your own referral</Text>
-                        </div>
-                    </Grid.Cell>
-                    <Grid.Cell columnSpan={{xs: 6, sm: 3, md: 3, lg: 6, xl: 6}}>
-                      <div className="referral-grid-input"></div>
-                        <TextField label="" autoComplete="off"></TextField>
-                      
-                    </Grid.Cell>
-                    <Grid.Cell columnSpan={{xs: 6, sm: 3, md: 3, lg: 6, xl: 6}}>
-                    <div className="referral-grid-text">
-                        <Text as="p" variant="bodyLg">Self referral detected through IP
-                        </Text>
-                        </div>
-                    </Grid.Cell>
-                    <Grid.Cell columnSpan={{xs: 6, sm: 3, md: 3, lg: 6, xl: 6}}>
-                      <div className="referral-grid-input"></div>
-                        <TextField label="" autoComplete="off"></TextField>
-                      
-                    </Grid.Cell>
+          <Grid.Cell columnSpan={{ xs: 6, sm: 3, md: 3, lg: 6, xl: 6 }}>
+            <div className="referral-grid-text">
+              <Text as="p" variant="bodyLg">
+                Failed to create coupon
+              </Text>
+            </div>
+          </Grid.Cell>
+          <Grid.Cell columnSpan={{ xs: 6, sm: 3, md: 3, lg: 6, xl: 6 }}>
+            <div className="referral-grid-input"></div>
+            <TextField label="" autoComplete="off"></TextField>
+          </Grid.Cell>
+          <Grid.Cell columnSpan={{ xs: 6, sm: 3, md: 3, lg: 6, xl: 6 }}>
+            <div className="referral-grid-text">
+              <Text as="p" variant="bodyLg">
+                Failed to create member
+              </Text>
+            </div>
+          </Grid.Cell>
+          <Grid.Cell columnSpan={{ xs: 6, sm: 3, md: 3, lg: 6, xl: 6 }}>
+            <div className="referral-grid-input"></div>
+            <TextField label="" autoComplete="off"></TextField>
+          </Grid.Cell>
+          <Grid.Cell columnSpan={{ xs: 6, sm: 3, md: 3, lg: 6, xl: 6 }}>
+            <div className="referral-grid-text">
+              <Text as="p" variant="bodyLg">
+                Invalid token
+              </Text>
+            </div>
+          </Grid.Cell>
+          <Grid.Cell columnSpan={{ xs: 6, sm: 3, md: 3, lg: 6, xl: 6 }}>
+            <div className="referral-grid-input"></div>
+            <TextField label="" autoComplete="off"></TextField>
+          </Grid.Cell>
+          <Grid.Cell columnSpan={{ xs: 6, sm: 3, md: 3, lg: 6, xl: 6 }}>
+            <div className="referral-grid-text">
+              <Text as="p" variant="bodyLg">
+                Referral reward is not available for existing customers. It
+                appears you already an existing customer in our store
+              </Text>
+            </div>
+          </Grid.Cell>
+          <Grid.Cell columnSpan={{ xs: 6, sm: 3, md: 3, lg: 6, xl: 6 }}>
+            <div className="referral-grid-input"></div>
+            <TextField label="" autoComplete="off"></TextField>
+          </Grid.Cell>
+          <Grid.Cell columnSpan={{ xs: 6, sm: 3, md: 3, lg: 6, xl: 6 }}>
+            <div className="referral-grid-text">
+              <Text as="p" variant="bodyLg">
+                You can't use your own referral
+              </Text>
+            </div>
+          </Grid.Cell>
+          <Grid.Cell columnSpan={{ xs: 6, sm: 3, md: 3, lg: 6, xl: 6 }}>
+            <div className="referral-grid-input"></div>
+            <TextField label="" autoComplete="off"></TextField>
+          </Grid.Cell>
+          <Grid.Cell columnSpan={{ xs: 6, sm: 3, md: 3, lg: 6, xl: 6 }}>
+            <div className="referral-grid-text">
+              <Text as="p" variant="bodyLg">
+                Self referral detected through IP
+              </Text>
+            </div>
+          </Grid.Cell>
+          <Grid.Cell columnSpan={{ xs: 6, sm: 3, md: 3, lg: 6, xl: 6 }}>
+            <div className="referral-grid-input"></div>
+            <TextField label="" autoComplete="off"></TextField>
+          </Grid.Cell>
         </Grid>
       )}
-      {selected === 1 && <LandingPage/>}
-      {selected === 2 && <ThankYouWidget/>}
+      {selected === 1 && <LandingPage />}
+      {selected === 2 && <ThankYouWidget />}
 
-      {selected === 3 && <ReferralWidget/>}
+      {selected === 3 && <ReferralWidget />}
     </Tabs>
   );
 }

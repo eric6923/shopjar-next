@@ -39,7 +39,7 @@ function Index() {
   const [isRewardOpen, setIsRewardOpen] = useState(false);
   const [isMessagesOpen, setIsMessagesOpen] = useState(false);
   const [sendOtpBgPopoverActive, setSendOtpBgPopoverActive] = useState(false);
-  
+
   const toggleVerifyOtpTextPopover = useCallback(
     () => setVerifyOtpTextPopoverActive((active) => !active),
     []
@@ -252,26 +252,26 @@ function Index() {
 
   //Form Handlers
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    phone: '',
-    paypalEmail: '',
-    websites: '',
-    promotionPlan: ''
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    paypalEmail: "",
+    websites: "",
+    promotionPlan: "",
   });
 
-  const handleChange122 = (e:any) => {
+  const handleChange122 = (e: any) => {
     const { name, value } = e.target;
-    setFormData(prevState => ({
+    setFormData((prevState) => ({
       ...prevState,
-      [name]: value
+      [name]: value,
     }));
   };
 
-  const handleSubmit = (e:any) => {
+  const handleSubmit = (e: any) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    console.log("Form submitted:", formData);
     // Handle form submission logic here
   };
 
@@ -289,13 +289,12 @@ function Index() {
         <Text as="h1" variant="headingLg">
           Customize Affiliate signup form
           {/* <div className="toogle-switch-affliate"> */}
-                        <label className="toggle-switch2">
-                          <input type="checkbox" defaultChecked />
-                          <span className="slider round"></span>
-                        </label>
-                      {/* </div> */}
+          <label className="toggle-switch2">
+            <input type="checkbox" defaultChecked />
+            <span className="slider round"></span>
+          </label>
+          {/* </div> */}
         </Text>
-        
       </div>
 
       <div className="translation-buttongroup">
@@ -979,211 +978,216 @@ function Index() {
               <Divider />
             </div>
             <Box padding="400">
-            <InlineStack align="space-between" blockAlign="center">
-              <div className="referral-link">
-                <Text as="p" variant="bodyLg">
-                ADDITIONAL INFO
-                </Text>
-              </div>
-              <div className="referral-button">
-                <Button
-                  variant="monochromePlain"
-                  onClick={toggleAdditionalCollapsible}
-                  ariaExpanded={isAdditionOpen}
-                  size="large"
-                  ariaControls="page-title-collapsible"
-                  icon={isAdditionOpen ? ChevronUpIcon : ChevronDownIcon}
-                ></Button>
-              </div>
-            </InlineStack>
+              <InlineStack align="space-between" blockAlign="center">
+                <div className="referral-link">
+                  <Text as="p" variant="bodyLg">
+                    ADDITIONAL INFO
+                  </Text>
+                </div>
+                <div className="referral-button">
+                  <Button
+                    variant="monochromePlain"
+                    onClick={toggleAdditionalCollapsible}
+                    ariaExpanded={isAdditionOpen}
+                    size="large"
+                    ariaControls="page-title-collapsible"
+                    icon={isAdditionOpen ? ChevronUpIcon : ChevronDownIcon}
+                  ></Button>
+                </div>
+              </InlineStack>
 
-            <Collapsible
-              open={isAdditionOpen}
-              id="page-title-collapsible"
-              transition={{
-                duration: "500ms",
-                timingFunction: "ease-in-out",
-              }}
-            >
-              <Box padding="400" paddingInline="400">
-                <div className="custom-textfield">
-                  <TextField
-                    label="Title"
-                    autoComplete="off"
-                  />
-                </div>
-                <div className="custom-textfield-desc">
-                  <TextField label="Description" autoComplete="off" />
-                </div>
-              </Box>
-            </Collapsible>
-          </Box>
-          <div className="divider">
+              <Collapsible
+                open={isAdditionOpen}
+                id="page-title-collapsible"
+                transition={{
+                  duration: "500ms",
+                  timingFunction: "ease-in-out",
+                }}
+              >
+                <Box padding="400" paddingInline="400">
+                  <div className="custom-textfield">
+                    <TextField label="Title" autoComplete="off" />
+                  </div>
+                  <div className="custom-textfield-desc">
+                    <TextField label="Description" autoComplete="off" />
+                  </div>
+                </Box>
+              </Collapsible>
+            </Box>
+            <div className="divider">
               <Divider />
             </div>
             <Box padding="400">
-            <InlineStack align="space-between" blockAlign="center">
-              <div className="referral-link">
-                <Text as="p" variant="bodyLg">
-                CUSTOM CSS
-                </Text>
-              </div>
-              <div className="referral-button">
-                <Button
-                  variant="monochromePlain"
-                  onClick={toggleCustomCollapsible}
-                  ariaExpanded={isCustomOpen}
-                  size="large"
-                  ariaControls="page-title-collapsible"
-                  icon={isCustomOpen ? ChevronUpIcon : ChevronDownIcon}
-                ></Button>
-              </div>
-            </InlineStack>
-
-            <Collapsible
-              open={isCustomOpen}
-              id="page-title-collapsible"
-              transition={{
-                duration: "500ms",
-                timingFunction: "ease-in-out",
-              }}
-            >
-              <Box padding="400" paddingInline="400">
-                <div className="custom-textfield-desc">
-                  <TextField label="Custom css" autoComplete="off" />
+              <InlineStack align="space-between" blockAlign="center">
+                <div className="referral-link">
+                  <Text as="p" variant="bodyLg">
+                    CUSTOM CSS
+                  </Text>
                 </div>
-              </Box>
-            </Collapsible>
-          </Box>
+                <div className="referral-button">
+                  <Button
+                    variant="monochromePlain"
+                    onClick={toggleCustomCollapsible}
+                    ariaExpanded={isCustomOpen}
+                    size="large"
+                    ariaControls="page-title-collapsible"
+                    icon={isCustomOpen ? ChevronUpIcon : ChevronDownIcon}
+                  ></Button>
+                </div>
+              </InlineStack>
+
+              <Collapsible
+                open={isCustomOpen}
+                id="page-title-collapsible"
+                transition={{
+                  duration: "500ms",
+                  timingFunction: "ease-in-out",
+                }}
+              >
+                <Box padding="400" paddingInline="400">
+                  <div className="custom-textfield-desc">
+                    <TextField label="Custom css" autoComplete="off" />
+                  </div>
+                </Box>
+              </Collapsible>
+            </Box>
           </Card>
         </div>
 
         {/* Right Side Card */}
         <div className="card2">
           <Card>
-          <div className="affiliate-container">
-      <div className="affiliate-wrapper">
-        <div className="form-section">
-          <h1 className="form-title">Affiliate signup form</h1>
-          <p className="form-subtitle">Complete the form and submit to join our affiliate program</p>
-          
-          <form onSubmit={handleSubmit}>
-            <div className="form-row">
-              <div className="form-group">
-                <label className="form-label">
-                  First Name <span className="required">*</span>
-                </label>
-                <input
-                  type="text"
-                  name="firstName"
-                  placeholder="Enter first name"
-                  value={formData.firstName}
-                  onChange={handleChange122}
-                  required
-                  className="form-input"
-                />
+            <div className="affiliate-container">
+              <div className="affiliate-wrapper">
+                <div className="form-section">
+                  <h1 className="form-title">Affiliate signup form</h1>
+                  <p className="form-subtitle">
+                    Complete the form and submit to join our affiliate program
+                  </p>
+
+                  <form onSubmit={handleSubmit}>
+                    <div className="form-row">
+                      <div className="form-group">
+                        <label className="form-label">
+                          First Name <span className="required">*</span>
+                        </label>
+                        <input
+                          type="text"
+                          name="firstName"
+                          placeholder="Enter first name"
+                          value={formData.firstName}
+                          onChange={handleChange122}
+                          required
+                          className="form-input"
+                        />
+                      </div>
+
+                      <div className="form-group">
+                        <label className="form-label">Last Name</label>
+                        <input
+                          type="text"
+                          name="lastName"
+                          placeholder="Enter last name"
+                          value={formData.lastName}
+                          onChange={handleChange122}
+                          className="form-input"
+                        />
+                      </div>
+                    </div>
+
+                    <div className="form-group">
+                      <label className="form-label">
+                        Email <span className="required">*</span>
+                      </label>
+                      <input
+                        type="email"
+                        name="email"
+                        placeholder="Enter your email address"
+                        value={formData.email}
+                        onChange={handleChange122}
+                        required
+                        className="form-input"
+                      />
+                    </div>
+
+                    <div className="form-group">
+                      <label className="form-label">Phone</label>
+                      <input
+                        type="tel"
+                        name="phone"
+                        placeholder="Enter phone number"
+                        value={formData.phone}
+                        onChange={handleChange122}
+                        className="form-input"
+                      />
+                    </div>
+
+                    <div className="form-group">
+                      <label className="form-label">Paypal Email</label>
+                      <input
+                        type="email"
+                        name="paypalEmail"
+                        placeholder="Enter your Paypal Email address"
+                        value={formData.paypalEmail}
+                        onChange={handleChange122}
+                        className="form-input"
+                      />
+                    </div>
+
+                    <div className="form-group">
+                      <label className="form-label">
+                        List the website(s) you will use to send traffic?
+                      </label>
+                      <input
+                        type="text"
+                        name="websites"
+                        placeholder="Enter websites"
+                        value={formData.websites}
+                        onChange={handleChange122}
+                        className="form-input"
+                      />
+                    </div>
+
+                    <div className="form-group">
+                      <label className="form-label">
+                        How you are planning to promote us?
+                      </label>
+                      <textarea
+                        name="promotionPlan"
+                        placeholder="Enter your plan"
+                        value={formData.promotionPlan}
+                        onChange={handleChange122}
+                        className="form-input"
+                        // rows="3"
+                      />
+                    </div>
+
+                    <button type="submit" className="submit-button">
+                      Join
+                    </button>
+                  </form>
+                </div>
+
+                <div className="info-section">
+                  <div className="image-container">
+                    <img
+                      src="https://spring-referral-testing.herokuapp.com/assets/images/template/affiliate-partnership.png"
+                      alt="Affiliate partnership illustration"
+                      className="illustration-image"
+                    />
+                  </div>
+
+                  <div className="info-content">
+                    <h2 className="info-title">Join and grow with us</h2>
+                    <p className="info-text">
+                      Share our products and services to your friends, network &
+                      clients and earn a commission for each affiliate sale. Get
+                      started by signing up for our affiliate program
+                    </p>
+                  </div>
+                </div>
               </div>
-              
-              <div className="form-group">
-                <label className="form-label">Last Name</label>
-                <input
-                  type="text"
-                  name="lastName"
-                  placeholder="Enter last name"
-                  value={formData.lastName}
-                  onChange={handleChange122}
-                  className="form-input"
-                />
-              </div>
             </div>
-            
-            <div className="form-group">
-              <label className="form-label">
-                Email <span className="required">*</span>
-              </label>
-              <input
-                type="email"
-                name="email"
-                placeholder="Enter your email address"
-                value={formData.email}
-                onChange={handleChange122}
-                required
-                className="form-input"
-              />
-            </div>
-            
-            <div className="form-group">
-              <label className="form-label">Phone</label>
-              <input
-                type="tel"
-                name="phone"
-                placeholder="Enter phone number"
-                value={formData.phone}
-                onChange={handleChange122}
-                className="form-input"
-              />
-            </div>
-            
-            <div className="form-group">
-              <label className="form-label">Paypal Email</label>
-              <input
-                type="email"
-                name="paypalEmail"
-                placeholder="Enter your Paypal Email address"
-                value={formData.paypalEmail}
-                onChange={handleChange122}
-                className="form-input"
-              />
-            </div>
-            
-            <div className="form-group">
-              <label className="form-label">List the website(s) you will use to send traffic?</label>
-              <input
-                type="text"
-                name="websites"
-                placeholder="Enter websites"
-                value={formData.websites}
-                onChange={handleChange122}
-                className="form-input"
-              />
-            </div>
-            
-            <div className="form-group">
-              <label className="form-label">How you are planning to promote us?</label>
-              <textarea
-                name="promotionPlan"
-                placeholder="Enter your plan"
-                value={formData.promotionPlan}
-                onChange={handleChange122}
-                className="form-input"
-                // rows="3"
-              />
-            </div>
-            
-            <button type="submit" className="submit-button">
-              Join
-            </button>
-          </form>
-        </div>
-        
-        <div className="info-section">
-          <div className="image-container">
-            <img 
-              src="https://spring-referral-testing.herokuapp.com/assets/images/template/affiliate-partnership.png"
-              alt="Affiliate partnership illustration" 
-              className="illustration-image"
-            />
-          </div>
-          
-          <div className="info-content">
-            <h2 className="info-title">Join and grow with us</h2>
-            <p className="info-text">
-              Share our products and services to your friends, network & clients and earn a commission for each affiliate sale. Get started by signing up for our affiliate program
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
           </Card>
         </div>
       </InlineGrid>

@@ -17,7 +17,7 @@ const storeSession = async (session: Session): Promise<boolean> => {
       "EX",
       60 * 60 * 24 * 7
     ); // Expires in 7 days
-    console.log('Session Token Stored Successfully')
+    console.log("Session Token Stored Successfully");
     return true;
   } catch (error) {
     console.error("Error storing session in Redis:", error);

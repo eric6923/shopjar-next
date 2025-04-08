@@ -55,24 +55,24 @@ function Index() {
       </div>
 
       <div className="translation-text1">
-            <Text as="h1" variant="headingLg">
-            Customize Email Template - Notify administrators when an affiliate sale is made
-              <label className="toggle-switch2">
-                <input
-                  type="checkbox"
-                  checked={isChecked}
-                  onChange={() => setIsChecked(!isChecked)}
-                />
-                <span className="slider round"></span>
-              </label>
-              <div className="second-toggle-text1">
-              <Text as="p" variant="bodyLg">
-                {isChecked ? "Live" : "Draft"}
-              </Text>
-              </div>
+        <Text as="h1" variant="headingLg">
+          Customize Email Template - Notify administrators when an affiliate
+          sale is made
+          <label className="toggle-switch2">
+            <input
+              type="checkbox"
+              checked={isChecked}
+              onChange={() => setIsChecked(!isChecked)}
+            />
+            <span className="slider round"></span>
+          </label>
+          <div className="second-toggle-text1">
+            <Text as="p" variant="bodyLg">
+              {isChecked ? "Live" : "Draft"}
             </Text>
-            
           </div>
+        </Text>
+      </div>
 
       <div className="translation-buttongroup">
         <ButtonGroup>
@@ -241,7 +241,7 @@ function Index() {
                 // style={{ overflow: "visible" }}
               >
                 <Box padding="400" paddingInline="400">
-                <div className="custom-textfield-desc">
+                  <div className="custom-textfield-desc">
                     <TextField label="Message Text" autoComplete="off" />
                     <Text as="h6" variant="headingSm">
                       Short codes available
@@ -310,17 +310,17 @@ function Index() {
                 </div>
                 <div className="affiliate-card2-text1">
                   <Text as="h1" variant="headingMd">
-                  You have new sale
+                    You have new sale
                   </Text>
                 </div>
                 <div className="card2-text2">
                   <Text as="p" variant="bodyMd">
-                  {`You have got a sale through {{affiliate_name}} and their purchase order value is {{order_value}}`}
+                    {`You have got a sale through {{affiliate_name}} and their purchase order value is {{order_value}}`}
                   </Text>
                 </div>
                 <div className="card2-text3">
                   <Text as="p" variant="bodyMd">
-                  {`To view all sales {{sales_url}}`}
+                    {`To view all sales {{sales_url}}`}
                   </Text>
                 </div>
               </Card>

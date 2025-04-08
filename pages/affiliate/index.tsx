@@ -44,7 +44,7 @@ const VerticalTabsComponent = () => {
       case "affiliate-signup":
         return (
           <Page title="Affiliate Signup Form">
-          <Box padding="400">
+            <Box padding="400">
               <div className="affliate-signup-card">
                 <Card>
                   <div className="affliate-card-1">
@@ -73,43 +73,43 @@ const VerticalTabsComponent = () => {
                   </div>
                 </Card>
               </div>
-          </Box>
+            </Box>
           </Page>
         );
       case "emails":
         return (
           <Box padding="400">
-            <Emails/>
+            <Emails />
           </Box>
         );
       case "sales":
         return (
           <Box padding="400">
-            <Sales/>
+            <Sales />
           </Box>
         );
       case "commission-earnings":
         return (
           <Box padding="400">
-            <CommissionEarnings/>
+            <CommissionEarnings />
           </Box>
         );
       case "payouts":
         return (
           <Box padding="400">
-            <Payouts/>
+            <Payouts />
           </Box>
         );
       case "payment-methods":
         return (
           <Box padding="400">
-            <PaymentMethods/>
+            <PaymentMethods />
           </Box>
         );
       case "settings":
         return (
           <Box padding="400">
-            <Settings/>
+            <Settings />
           </Box>
         );
       default:

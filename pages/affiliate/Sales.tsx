@@ -11,18 +11,18 @@ function Sales() {
   );
   return (
     <Page title="Sales">
-        <div className="sales-textfield">
-      <InlineStack gap="200">
-        <TextField
-          label=""
-          value={textFieldValue}
-          onChange={handleTextFieldChange}
-          placeholder="Search by title"
-          prefix={<Icon source={SearchIcon} />}
-          autoComplete="off"
-        />
-        <Button variant="primary">Search</Button>
-      </InlineStack>
+      <div className="sales-textfield">
+        <InlineStack gap="200">
+          <TextField
+            label=""
+            value={textFieldValue}
+            onChange={handleTextFieldChange}
+            placeholder="Search by title"
+            prefix={<Icon source={SearchIcon} />}
+            autoComplete="off"
+          />
+          <Button variant="primary">Search</Button>
+        </InlineStack>
       </div>
     </Page>
   );

@@ -5,9 +5,7 @@ import {
   WebhookHandler,
 } from "@shopify/shopify-api";
 import "@shopify/shopify-api/adapters/node";
-import {
-  shopifyApp,
-} from "@shopify/shopify-app-express";
+import { shopifyApp } from "@shopify/shopify-app-express";
 
 import { ApiVersion } from "@shopify/shopify-api";
 // import ordersCreateHandler from "./webhooks/orders_create";
@@ -17,10 +15,7 @@ const isDev = process.env.NODE_ENV === "development";
 
 const apiVersion = process.env.SHOPIFY_API_VERSION;
 
-if (
-  !apiVersion ||
-  !Object.values(ApiVersion).includes(apiVersion)
-) {
+if (!apiVersion || !Object.values(ApiVersion).includes(apiVersion)) {
   throw new Error(`Invalid SHOPIFY_API_VERSION: ${apiVersion}`);
 }
 

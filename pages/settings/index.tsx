@@ -28,7 +28,8 @@ const SettingsPage = () => {
   const [isOtpEnabled, setIsOtpEnabled] = useState(false);
   const [isCopied, setIsCopied] = useState(false);
   const [dropselected, setdropSelected] = useState("today");
-  const [isReferralSaleTagEnabled, setIsReferralSaleTagEnabled] = useState(true);
+  const [isReferralSaleTagEnabled, setIsReferralSaleTagEnabled] =
+    useState(true);
 
   const handleTabChange = (selectedTabIndex: number) => {
     setSelected(selectedTabIndex);
@@ -191,7 +192,11 @@ const SettingsPage = () => {
                       </Text>
                     </div>
                     <Card>
-                      <Button variant="secondary" size="large" onClick={()=>router.push('/settings/translation')}>
+                      <Button
+                        variant="secondary"
+                        size="large"
+                        onClick={() => router.push("/settings/translation")}
+                      >
                         Manage Translation
                       </Button>
                     </Card>
@@ -204,11 +209,11 @@ const SettingsPage = () => {
                         Referrer / Affiliate dashboard
                       </Text>
                       <div className="referral-text">
-                      <Text as="p" variant="bodyLg">
-                        Let your referrer / affiliates (referring persons) to
-                        see their earned rewards, referrals, referral sales and
-                        commissions.
-                      </Text>
+                        <Text as="p" variant="bodyLg">
+                          Let your referrer / affiliates (referring persons) to
+                          see their earned rewards, referrals, referral sales
+                          and commissions.
+                        </Text>
                       </div>
                     </div>
                     <Card>
@@ -241,7 +246,13 @@ const SettingsPage = () => {
                           </svg>
                         </button>
                       </div>
-                      <Button variant="secondary" size="large" onClick={()=>router.push('/settings/my-account-page/customize')}>
+                      <Button
+                        variant="secondary"
+                        size="large"
+                        onClick={() =>
+                          router.push("/settings/my-account-page/customize")
+                        }
+                      >
                         Customize Referrer / Affliate dashboard page
                       </Button>
                     </Card>
@@ -290,17 +301,18 @@ const SettingsPage = () => {
                         Allow Guest Login via an Email OTP
                       </Text>
                       <div className="guest-login">
-                      <div className="referral-text">
-                        <Text as="p" variant="bodyLg">
-                          Enable a seamless experience for your Referral &
-                          Affiliate program members / referrer / affiliates to
-                          login to their dashboard using an One-time-passcode
-                          (OTP). When enabled, a one-time-passcode will be
-                          generated and emailed to the affiliate / referral
-                          members when accessing their dashboard. They can just
-                          enter the OTP to access their referrer / affiliate
-                          dashboard to see their rewards and commissions.
-                        </Text>
+                        <div className="referral-text">
+                          <Text as="p" variant="bodyLg">
+                            Enable a seamless experience for your Referral &
+                            Affiliate program members / referrer / affiliates to
+                            login to their dashboard using an One-time-passcode
+                            (OTP). When enabled, a one-time-passcode will be
+                            generated and emailed to the affiliate / referral
+                            members when accessing their dashboard. They can
+                            just enter the OTP to access their referrer /
+                            affiliate dashboard to see their rewards and
+                            commissions.
+                          </Text>
                         </div>
                       </div>
                     </div>
@@ -317,10 +329,22 @@ const SettingsPage = () => {
                               OTP Login?
                             </Text>
                           </div>
-                          <Button variant="secondary" size="large" onClick={()=>router.push('/settings/otp/email/customize')}>
+                          <Button
+                            variant="secondary"
+                            size="large"
+                            onClick={() =>
+                              router.push("/settings/otp/email/customize")
+                            }
+                          >
                             Customize OTP Email
                           </Button>
-                          <Button variant="secondary" size="large" onClick={()=> router.push('settings/otp/page/customize')}>
+                          <Button
+                            variant="secondary"
+                            size="large"
+                            onClick={() =>
+                              router.push("settings/otp/page/customize")
+                            }
+                          >
                             Customize OTP Page
                           </Button>
                         </InlineStack>
@@ -336,10 +360,10 @@ const SettingsPage = () => {
                         Calculate Reward or Commission from
                       </Text>
                       <div className="referral-text">
-                      <Text as="p" variant="bodyLg">
-                        Choose whether the affiliate commission should be
-                        calculated with or without shipping & taxes.
-                      </Text>
+                        <Text as="p" variant="bodyLg">
+                          Choose whether the affiliate commission should be
+                          calculated with or without shipping & taxes.
+                        </Text>
                       </div>
                     </div>
                     <Card>
@@ -356,51 +380,54 @@ const SettingsPage = () => {
                 </Box>
 
                 <Box paddingBlockStart="500">
-                <div className="dashboard-content">
-  <div className="dashboard-text">
-    <Text as="h1" variant="headingMd">
-      Enable Referral And Affiliate Sale Tag
-    </Text>
-    <div className="referral-text">
-      <Text as="p" variant="bodyLg">
-        This setting will allow referral and affiliate sales to
-        be tagged as 'Referral and Affiliate Sale - Shopjar'.
-      </Text>
-    </div>
-  </div>
-  <div className="enable-referrer">
-    <div className="toggle-container">
-      <label className="toggle-switch">
-        <input 
-          type="checkbox" 
-          checked={isReferralSaleTagEnabled} 
-          onChange={(e) => setIsReferralSaleTagEnabled(e.target.checked)}
-        />
-        <span className="slider round"></span>
-      </label>
-      <span className="toggle-label">
-        {isReferralSaleTagEnabled ? 'Enabled' : 'Disabled'}
-      </span>
-    </div>
-  </div>
-</div>
+                  <div className="dashboard-content">
+                    <div className="dashboard-text">
+                      <Text as="h1" variant="headingMd">
+                        Enable Referral And Affiliate Sale Tag
+                      </Text>
+                      <div className="referral-text">
+                        <Text as="p" variant="bodyLg">
+                          This setting will allow referral and affiliate sales
+                          to be tagged as 'Referral and Affiliate Sale -
+                          Shopjar'.
+                        </Text>
+                      </div>
+                    </div>
+                    <div className="enable-referrer">
+                      <div className="toggle-container">
+                        <label className="toggle-switch">
+                          <input
+                            type="checkbox"
+                            checked={isReferralSaleTagEnabled}
+                            onChange={(e) =>
+                              setIsReferralSaleTagEnabled(e.target.checked)
+                            }
+                          />
+                          <span className="slider round"></span>
+                        </label>
+                        <span className="toggle-label">
+                          {isReferralSaleTagEnabled ? "Enabled" : "Disabled"}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
                 </Box>
               </Box>
             )}
 
             {selected === 1 && (
               <Box>
-                <EmailDomain/>
+                <EmailDomain />
               </Box>
             )}
             {selected === 2 && (
               <Box>
-                <Integration/>
+                <Integration />
               </Box>
             )}
             {selected === 3 && (
               <Box>
-                <Advanced/>
+                <Advanced />
               </Box>
             )}
 

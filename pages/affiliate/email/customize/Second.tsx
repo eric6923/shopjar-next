@@ -55,24 +55,24 @@ function Index() {
       </div>
 
       <div className="translation-text1">
-      <Text as="h1" variant="headingLg">
-        Customize Email Template - Notify administrators when an affiliate application is received
-        <label className="toggle-switch2">
-          <input
-            type="checkbox"
-            checked={isChecked}
-            onChange={() => setIsChecked(!isChecked)}
-          />
-          <span className="slider round"></span>
-        </label>
-        <div className="second-toggle-text">
-        <Text as="p" variant="bodyLg">
-          {isChecked ? "Live" : "Draft"}
+        <Text as="h1" variant="headingLg">
+          Customize Email Template - Notify administrators when an affiliate
+          application is received
+          <label className="toggle-switch2">
+            <input
+              type="checkbox"
+              checked={isChecked}
+              onChange={() => setIsChecked(!isChecked)}
+            />
+            <span className="slider round"></span>
+          </label>
+          <div className="second-toggle-text">
+            <Text as="p" variant="bodyLg">
+              {isChecked ? "Live" : "Draft"}
+            </Text>
+          </div>
         </Text>
-        </div>
-      </Text>
-      
-    </div>
+      </div>
 
       <div className="translation-buttongroup">
         <ButtonGroup>
@@ -241,7 +241,7 @@ function Index() {
                 // style={{ overflow: "visible" }}
               >
                 <Box padding="400" paddingInline="400">
-                <div className="custom-textfield-desc">
+                  <div className="custom-textfield-desc">
                     <TextField label="Message Text" autoComplete="off" />
                     <Text as="h6" variant="headingSm">
                       Short codes available
@@ -310,23 +310,22 @@ function Index() {
                 </div>
                 <div className="second-card2-text1">
                   <Text as="h1" variant="headingMd">
-                  Affiliate request.
-
+                    Affiliate request.
                   </Text>
                 </div>
                 <div className="second-text2">
                   <Text as="p" variant="bodyMd">
-                  Hello,
+                    Hello,
                   </Text>
                 </div>
                 <div className="card2-text3">
                   <Text as="p" variant="bodyMd">
-                  {`Your have an affiliate request to the shop {{store_url}}`}
+                    {`Your have an affiliate request to the shop {{store_url}}`}
                   </Text>
                 </div>
                 <div className="card2-text3">
                   <Text as="p" variant="bodyMd">
-                  Thank you.
+                    Thank you.
                   </Text>
                 </div>
               </Card>

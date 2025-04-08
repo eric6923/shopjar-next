@@ -16,7 +16,7 @@ import {
 import { HeartIcon } from "@shopify/polaris-icons";
 import type { NextPage } from "next";
 
-export async function getServerSideProps(context:any) {
+export async function getServerSideProps(context: any) {
   //DO NOT REMOVE THIS.
   return await isInitialLoad(context);
 }
@@ -63,7 +63,13 @@ const SupportPage: NextPage = () => {
             </Text>
 
             <div>
-              <Button variant="primary" size="large" onClick={()=> window.open("https://zcal.co/t/shopjar/30min","_blank")}>
+              <Button
+                variant="primary"
+                size="large"
+                onClick={() =>
+                  window.open("https://zcal.co/t/shopjar/30min", "_blank")
+                }
+              >
                 Schedule a meeting with us
               </Button>
             </div>
@@ -84,7 +90,12 @@ const SupportPage: NextPage = () => {
               <Button
                 variant="secondary"
                 size="large"
-                onClick={()=> window.open("https://apps.shopify.com/referral-and-affiliates#modal-show=WriteReviewModal","_blank")}
+                onClick={() =>
+                  window.open(
+                    "https://apps.shopify.com/referral-and-affiliates#modal-show=WriteReviewModal",
+                    "_blank"
+                  )
+                }
                 icon={<Icon source={HeartIcon} />}
               >
                 Rate us on the Shopify app store

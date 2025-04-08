@@ -55,24 +55,23 @@ function Index() {
       </div>
 
       <div className="translation-text1">
-            <Text as="h1" variant="headingLg">
-            Customize Email Template - Notify when an affiliate earns a commission
-              <label className="toggle-switch2">
-                <input
-                  type="checkbox"
-                  checked={isChecked}
-                  onChange={() => setIsChecked(!isChecked)}
-                />
-                <span className="slider round"></span>
-              </label>
-              <div className="second-toggle-text2">
-              <Text as="p" variant="bodyLg">
-                {isChecked ? "Live" : "Draft"}
-              </Text>
-              </div>
+        <Text as="h1" variant="headingLg">
+          Customize Email Template - Notify when an affiliate earns a commission
+          <label className="toggle-switch2">
+            <input
+              type="checkbox"
+              checked={isChecked}
+              onChange={() => setIsChecked(!isChecked)}
+            />
+            <span className="slider round"></span>
+          </label>
+          <div className="second-toggle-text2">
+            <Text as="p" variant="bodyLg">
+              {isChecked ? "Live" : "Draft"}
             </Text>
-            
           </div>
+        </Text>
+      </div>
 
       <div className="translation-buttongroup">
         <ButtonGroup>
@@ -242,7 +241,7 @@ function Index() {
                 // style={{ overflow: "visible" }}
               >
                 <Box padding="400" paddingInline="400">
-                <div className="custom-textfield-desc">
+                  <div className="custom-textfield-desc">
                     <TextField label="Message Text" autoComplete="off" />
                     <Text as="h6" variant="headingSm">
                       Short codes available
@@ -312,39 +311,41 @@ function Index() {
                 </div>
                 <div className="affiliate-fifth-text1">
                   <Text as="h1" variant="headingMd">
-                  Your affiliate earnings are processed.
+                    Your affiliate earnings are processed.
                   </Text>
                 </div>
                 <div className="affliate-fifth-text2">
                   <Text as="p" variant="bodyMd">
-                  {`Hey {{affiliate_name}},`}
+                    {`Hey {{affiliate_name}},`}
                   </Text>
                 </div>
                 <div className="affliate-fifth-text3">
                   <Text as="p" variant="bodyMd">
-                  We've processed your affiliate payout. Thank you for your continued support.
+                    We've processed your affiliate payout. Thank you for your
+                    continued support.
                   </Text>
                 </div>
                 <div className="affliate-fifth-text4">
                   <Text as="p" variant="bodyMd">
-                  Keep referring more and earn more.
+                    Keep referring more and earn more.
                   </Text>
                 </div>
                 <div className="affliate-fifth-text5">
                   <Text as="p" variant="bodyMd">
-                  {`Your affiliate referral link is: {{affiliate_url}}.`}
+                    {`Your affiliate referral link is: {{affiliate_url}}.`}
                   </Text>
                 </div>
                 <div className="affliate-fifth-text6">
                   <Text as="p" variant="bodyMd">
-                  {`For more information visit this URL: {{affiliate_dashboard_url}}.`}
+                    {`For more information visit this URL: {{affiliate_dashboard_url}}.`}
                   </Text>
                 </div>
- 
               </Card>
               <div className="affliate-fourth-text5">
-                <Text as="p" variant="bodyMd">Thank you for shopping with us</Text>
-                </div>
+                <Text as="p" variant="bodyMd">
+                  Thank you for shopping with us
+                </Text>
+              </div>
             </div>
           </Card>
         </div>

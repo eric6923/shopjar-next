@@ -59,15 +59,14 @@
   position: relative;
   display: inline-block;
   width: 50px;
-  
+
   height: 24px;
-  
 }
 
-.toggle-switch input { 
+.toggle-switch input {
   opacity: 0;
-  width: 0; 
-  
+  width: 0;
+
   height: 0;
 }
 
@@ -79,7 +78,7 @@
   right: 0;
   bottom: 0;
   background-color: #ccc;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .slider:before {
@@ -90,7 +89,7 @@
   left: 3px;
   bottom: 3px;
   background-color: white;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 input:checked + .slider {
@@ -113,7 +112,6 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
-
 
 /* Translations Section */
 .translations-section {
@@ -161,7 +159,7 @@ input:checked + .slider:before {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  white-space:no-wrap;
+  white-space: no-wrap;
 }
 .radashboard button {
   white-space: nowrap;
@@ -199,7 +197,7 @@ input:checked + .slider:before {
   transition: transform 0.2s ease;
 }
 
-.cookie-validity{
+.cookie-validity {
   border: 1px solid #e0e0e0;
   border-radius: 4px;
   padding: 20px;
@@ -207,13 +205,13 @@ input:checked + .slider:before {
   margin-top: 15px;
 }
 
-.cookie-text{
+.cookie-text {
   display: flex;
   align-items: center;
   margin-top: 12px;
 }
 
-.cookie-textfield{
+.cookie-textfield {
   margin-left: 10px;
 }
 
@@ -222,29 +220,29 @@ input:checked + .slider:before {
   align-items: center;
 }
 
-.otp-text{
+.otp-text {
   margin-top: 6px;
   margin-right: 6px;
   margin-left: -6px;
 }
 
-.select-width{
+.select-width {
   width: 270px;
 }
 
-.enable-referrer{
+.enable-referrer {
   margin-left: 12px;
 }
 
-.guest-login{
+.guest-login {
   text-align: left;
 }
 
-.OTP-card{
+.OTP-card {
   margin-top: 2px;
 }
 
-.referral-text{
+.referral-text {
   max-width: 26rem;
   text-align: justify;
 }
@@ -295,7 +293,7 @@ input:checked + .slider:before {
   right: 0;
   bottom: 0;
   background-color: #cccccc;
-  transition: .4s;
+  transition: 0.4s;
 }
 
 .slider:before {
@@ -306,7 +304,7 @@ input:checked + .slider:before {
   left: 2px;
   bottom: 2px;
   background-color: white;
-  transition: .4s;
+  transition: 0.4s;
 }
 
 input:checked + .slider {
@@ -325,11 +323,11 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-.text-field-email{
+.text-field-email {
   max-width: 12rem;
 }
 
-.text-email{
+.text-email {
   margin-top: 6px;
 }
 
@@ -342,7 +340,7 @@ input:checked + .slider:before {
   bottom: 42px;
 }
 
-.manage-emails-text{
+.manage-emails-text {
   grid-column: 1 / 2;
   display: flex;
   flex-direction: column;
@@ -361,7 +359,7 @@ input:checked + .slider:before {
 }
  */
 
- .text2-integrations {
+.text2-integrations {
   max-width: 45rem; /* Increased for better spacing */
   /* display: flex;
   flex-direction: column; */
@@ -376,51 +374,50 @@ input:checked + .slider:before {
   /* margin-top: 12px;  */
 }
 
-.enable-referrer-advanced{
+.enable-referrer-advanced {
   margin-left: 12px;
   margin-top: 24px;
 }
 
-.toggle-container-advanced{
+.toggle-container-advanced {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-.translation-icon{
+.translation-icon {
   margin-top: 24px;
   margin-left: 24px;
 }
 
-.translation-text1{
+.translation-text1 {
   position: absolute;
   left: 64px;
   top: 26px;
 }
 
-.translation-buttongroup{
+.translation-buttongroup {
   position: absolute;
   right: 25px;
   top: 25px;
 }
 
-.referral-grid-text{
+.referral-grid-text {
   margin-left: 12px;
   margin-top: 36px;
 }
 
-.referral-grid-input{
+.referral-grid-input {
   margin-top: 36px;
-  
 }
 
-.chevron-icon{
+.chevron-icon {
   width: 48px;
 }
 
 .custom-textfield {
   position: relative;
   right: 14px;
-  width: 330px; 
+  width: 330px;
   max-width: 500px;
   margin-top: 2px;
 }
@@ -430,23 +427,20 @@ input:checked + .slider:before {
   display: block;
 }
 
-.custom-checkbox{
+.custom-checkbox {
   position: relative;
   right: 14px;
   margin-top: 2px;
 }
 
-.custom-checkbox label{
+.custom-checkbox label {
   margin-top: 8px;
-
-
 }
-
 
 .custom-textfield2 {
   position: relative;
   right: -18px;
-  width: 330px; 
+  width: 330px;
   max-width: 500px;
   margin-top: 2px;
 }
@@ -456,22 +450,22 @@ input:checked + .slider:before {
   display: block;
 }
 
-.referral-link{
+.referral-link {
   margin-top: 10px;
 }
 
-.referral-button{
+.referral-button {
   margin-top: 18px;
 }
 
-.divider{
+.divider {
   margin-top: 16px;
 }
 
-.custom-textfield-customcss{
+.custom-textfield-customcss {
   position: relative;
   right: 18px;
-  width: 350px; 
+  width: 350px;
   max-width: 500px;
   margin-top: 2px;
 }
@@ -479,7 +473,7 @@ input:checked + .slider:before {
 .box-fixed {
   height: 530px;
   margin-top: 8px;
-  overflow-y: auto;  /* Ensure only vertical scroll appears */
+  overflow-y: auto; /* Ensure only vertical scroll appears */
   overflow-x: hidden; /* Prevent horizontal scrolling */
   scrollbar-width: thin; /* For Firefox: Makes the scrollbar slimmer */
   scrollbar-color: #b0b0b0 transparent; /* Custom scrollbar color */
@@ -501,38 +495,38 @@ input:checked + .slider:before {
   background: transparent; /* Hide track */
 }
 
-.logout-icon{
+.logout-icon {
   position: absolute;
   right: 100px;
   top: 37px;
 }
 
-.logout-text{
+.logout-text {
   position: absolute;
   right: 50px;
   top: 37px;
 }
 
-.tab-heading{
+.tab-heading {
   margin-bottom: 12px;
   margin-top: 6px;
 }
 
-.value{
+.value {
   margin-top: 4px;
 }
 
-.affliate-card-total{
+.affliate-card-total {
   margin-top: 12px;
   position: relative;
   height: 760px;
 }
 
-.affliate-fixed{
+.affliate-fixed {
   position: relative;
   height: 530px;
   margin-top: 8px;
-  overflow-y: auto;  
+  overflow-y: auto;
   overflow-x: hidden;
   scrollbar-width: thin; /* For Firefox: Makes the scrollbar slimmer */
   scrollbar-color: #b0b0b0 transparent; /* Custom scrollbar color */
@@ -553,24 +547,24 @@ input:checked + .slider:before {
   background: transparent; /* Hide track */
 }
 
-.referral-card1{
+.referral-card1 {
   max-width: 40%;
 }
 
-.referral-card1-text1{
+.referral-card1-text1 {
   margin-bottom: 6px;
 }
 
-.referral-card1-text2{
+.referral-card1-text2 {
   margin-top: 18px;
 }
 
-.copy-icon{
+.copy-icon {
   margin-top: 6px;
   color: blue;
 }
 
-.refferer-2ndcard{
+.refferer-2ndcard {
   max-width: 205px;
   position: relative;
   /* margin-left: 305px; */
@@ -578,12 +572,12 @@ input:checked + .slider:before {
   min-height: 165px;
   max-height: 165px;
   display: grid;
-  flex-direction: column; 
+  flex-direction: column;
   margin-bottom: -165px; /* Removes extra space */
   transform: translateX(305px); /* Moves right without affecting layout */
 }
 
-.referrer-3rdcard{
+.referrer-3rdcard {
   min-width: 205px;
   max-width: 205px;
   position: relative;
@@ -592,50 +586,47 @@ input:checked + .slider:before {
   min-height: 165px;
   max-height: 165px;
   display: grid;
-  flex-direction: column; 
-  
+  flex-direction: column;
 }
 
-.referrer-2ndcard-inside{
+.referrer-2ndcard-inside {
   margin-top: 20px;
   margin-left: 56px;
 }
 
-.referrer-2ndcard-text1{
-position: absolute;
-left: 62px;
+.referrer-2ndcard-text1 {
+  position: absolute;
+  left: 62px;
 }
 
-.referrer-2ndcard-text2{
-position: absolute;
-bottom: 28px;
-right: 102px;
+.referrer-2ndcard-text2 {
+  position: absolute;
+  bottom: 28px;
+  right: 102px;
 }
 
-.referrer-3ndcard-text1{
+.referrer-3ndcard-text1 {
   position: absolute;
   left: 52px;
 }
 
-.referral-card-total{
+.referral-card-total {
   margin-top: 12px;
   position: relative;
   height: 410px;
 }
 
-
-
-.referrer-text-table{
+.referrer-text-table {
   position: absolute;
   top: 210px;
 }
 
-.referrer-table{
+.referrer-table {
   position: relative;
   top: -80px;
 }
 
-.grid-affliate{
+.grid-affliate {
   position: relative;
   right: -310px;
   top: -170px;
@@ -643,241 +634,241 @@ right: 102px;
   gap: 20px;
 }
 
-.affliate-card-2nd{
+.affliate-card-2nd {
   margin-top: 4px;
   margin-left: 52px;
 }
 
-.affliate-card2-text{
+.affliate-card2-text {
   margin-left: 38px;
 }
 
-.affliate-card2-text2{
+.affliate-card2-text2 {
   margin-left: 62px;
 }
 
-.affliate-card3-text{
+.affliate-card3-text {
   margin-left: 28px;
 }
 
-.affliate-card3-text2{
+.affliate-card3-text2 {
   margin-left: 64px;
 }
 
-.affliate-card4-text{
+.affliate-card4-text {
   margin-left: 28px;
 }
 
-.affliate-card4-text2{
+.affliate-card4-text2 {
   margin-left: 52px;
 }
 
-.affliate-card5-text{
+.affliate-card5-text {
   margin-left: 38px;
 }
 
-.affliate-card5-text2{
+.affliate-card5-text2 {
   margin-left: 50px;
 }
 
-.grid1{
+.grid1 {
   width: 190px;
 }
 
-.grid2{
+.grid2 {
   width: 190px;
 }
 
-.grid3{
+.grid3 {
   width: 190px;
 }
 
-.grid-sample1{
+.grid-sample1 {
   position: relative;
   right: -22px;
 }
 
-.affliate-coupon-text{
+.affliate-coupon-text {
   position: absolute;
   top: 195px;
 }
 
-.input{
+.input {
   width: 265px;
   margin-top: 6px;
 }
 
-.grid-affliate2{
+.grid-affliate2 {
   position: relative;
   top: -150px;
   display: grid;
   gap: 20px;
-
-}.grid4{
+}
+.grid4 {
   width: 290px;
 }
 
-.grid5{
+.grid5 {
   width: 400px;
   position: absolute;
   right: 8px;
   max-height: 500px;
 }
 
-.paypal-svg{
+.paypal-svg {
   width: 80px;
   margin-left: 90px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
-.paypal-textfield{
+.paypal-textfield {
   max-width: 180px;
   margin-top: 6px;
 }
 
-.paypal-btn{
+.paypal-btn {
   position: absolute;
   right: 16px;
   top: 104px;
 }
 
-.grid-5-svg{
+.grid-5-svg {
   margin-left: 170px;
 }
 
-.grid-5-text{
+.grid-5-text {
   margin-left: 159px;
 }
 
-.grid-5-text2{
+.grid-5-text2 {
   margin-left: 173px;
 }
 
-.grid-5-btn{
+.grid-5-btn {
   margin-left: 122px;
   margin-top: 4px;
 }
 
-.affliate-text-table{
+.affliate-text-table {
   position: relative;
   top: -130px;
 }
 
-.affliate-table1{
+.affliate-table1 {
   position: relative;
-  top: -120px; 
+  top: -120px;
 }
 
-.affliate-text-table2{
+.affliate-text-table2 {
   position: relative;
   top: -100px;
 }
 
-.affliate-table2{
+.affliate-table2 {
   position: relative;
-  top: -90px; 
+  top: -90px;
 }
 
-.card1{
+.card1 {
   margin-left: 22px;
   max-width: 560px;
 }
 
-.card2{
+.card2 {
   margin-left: 20px;
   width: 820px;
   height: 800px;
 }
 
-.card2-img{
+.card2-img {
   margin-left: 300px;
   margin-bottom: 6px;
 }
 
-.card2-text1{
-margin-left: 220px;
+.card2-text1 {
+  margin-left: 220px;
 }
 
-.card2-text2{
+.card2-text2 {
   margin-left: 45px;
 }
 
-.card2-text3{
+.card2-text3 {
   margin-left: 270px;
 }
 
-.inner-card{
+.inner-card {
   margin-top: 50px;
   margin-bottom: 50px;
   margin-left: 15px;
   width: 760px;
 }
 
-.div-heading{
+.div-heading {
   display: flex;
   flex-direction: column;
   gap: 25px;
 }
 
-.email-text1{
+.email-text1 {
   margin-top: 4px;
   margin-right: 8px;
 }
 
-.email-btn{
+.email-btn {
   margin-top: 4px;
   position: relative;
   right: 15px;
 }
 
-.email-text{
+.email-text {
   margin-top: 6px;
   position: relative;
   right: 20px;
 }
 
-.send-otp-text{
+.send-otp-text {
   padding-top: 80px;
   padding-left: 200px;
 }
 
-.send-otp-text2{
+.send-otp-text2 {
   padding-top: 15px;
   text-align: center;
 }
 
-.send-otp-textfield{
+.send-otp-textfield {
   padding-left: 240px;
   padding-top: 22px;
   max-width: 500px;
 }
 
-.send-otp-btn{
+.send-otp-btn {
   padding-left: 30px;
   padding-top: 12px;
   height: 10px;
 }
 
-.send-otp-text3{
+.send-otp-text3 {
   padding-left: 180px;
   padding-top: 56px;
 }
 
-.send-otp-text4{
+.send-otp-text4 {
   position: relative;
   right: -400px;
   top: -20px;
 }
 
-.send-otp-text5{
+.send-otp-text5 {
   padding-left: 362px;
 }
 
 .custom-textfield-desc {
   position: relative;
   right: 14px;
-  width: 330px; 
+  width: 330px;
   max-width: 350px;
   margin-top: 2px;
 }
@@ -891,34 +882,34 @@ margin-left: 220px;
   padding: 10px;
 }
 
-.checkbox-text{
+.checkbox-text {
   padding-top: 8px;
-  padding-right: -4px
+  padding-right: -4px;
 }
 
-.verify-otp-text{
+.verify-otp-text {
   padding-top: 6px;
   padding-left: -4px;
 }
 
-.verify-otp-text1{
+.verify-otp-text1 {
   padding-top: 80px;
   display: flex;
   justify-content: center;
 }
 
-.verify-otp-text2{
+.verify-otp-text2 {
   padding-top: 14px;
   text-align: center;
 }
 
-.verify-otp-textfield{
+.verify-otp-textfield {
   padding-top: 20px;
   max-width: 500px;
   padding-left: 230px;
 }
 
-.verify-otp-btn{
+.verify-otp-btn {
   padding-top: 12px;
 }
 
@@ -940,7 +931,9 @@ margin-left: 220px;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+    Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: background-color 0.2s ease;
 }
@@ -963,7 +956,9 @@ margin-left: 220px;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+    Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: background-color 0.2s ease;
 }
@@ -972,11 +967,10 @@ margin-left: 220px;
   background-color: #3d6ce4;
 }
 
-.enable-referrer-new{
+.enable-referrer-new {
   margin-left: 12px;
   padding-top: 6px;
 }
-
 
 .enable-referrer-new .toggle-container {
   display: flex;
@@ -989,20 +983,20 @@ margin-left: 220px;
   color: #202223;
 }
 
-.klaviyo-grid2{
+.klaviyo-grid2 {
   padding-left: 54px;
   padding-top: 24px;
 }
 
-.klaviyo-grid{
+.klaviyo-grid {
   padding-left: 16px;
 }
 
-.klaviyo-text{
+.klaviyo-text {
   padding-top: 5px;
 }
 
-.enable-comission{
+.enable-comission {
   margin-right: 170px;
 }
 
@@ -1017,15 +1011,15 @@ margin-left: 220px;
   color: #202223;
 }
 
-.affliate-signup-form{
+.affliate-signup-form {
   padding-top: 17px;
 }
 
-.affliate-signup-card{
+.affliate-signup-card {
   padding-top: 4px;
 }
 
-.affliate-signup-text2{
+.affliate-signup-text2 {
   padding-top: 6px;
   max-width: 830px;
 }
@@ -1043,36 +1037,36 @@ margin-left: 220px;
   top: 40px;
 }
 
-.customize{
+.customize {
   padding-left: 6px;
 }
 
-.divider1{
+.divider1 {
   margin-top: 16px;
   padding-bottom: 12px;
 }
 
-.affliate-divider-space{
+.affliate-divider-space {
   padding-top: 16px;
 }
 
-.custom-checkbox-new{
+.custom-checkbox-new {
   position: relative;
   left: 193px;
   top: -27px;
 }
 
-.btn-backgroundcolor{
+.btn-backgroundcolor {
   padding-top: 4px;
 }
 
-.affliate-signup-card1{
+.affliate-signup-card1 {
   height: 720px;
   overflow-y: auto;
   overflow-x: hidden;
   scrollbar-width: thin;
-  scrollbar-color: #b0b0b0 transparent; 
-  margin-right: -15px; 
+  scrollbar-color: #b0b0b0 transparent;
+  margin-right: -15px;
 }
 
 /* AffiliateSignupForm.css */
@@ -1096,7 +1090,7 @@ margin-left: 220px;
   .affiliate-wrapper {
     flex-direction: row;
   }
-  
+
   .form-section,
   .info-section {
     width: 50%;
@@ -1131,7 +1125,7 @@ margin-left: 220px;
   .form-row {
     flex-direction: row;
   }
-  
+
   .form-row .form-group {
     width: 50%;
   }
@@ -1218,17 +1212,16 @@ margin-left: 220px;
   padding-bottom: 20px;
 } */
 
-.affliate-email-badge{
+.affliate-email-badge {
   position: relative;
   left: 525px;
 }
 
-.affliate-email-icon{
+.affliate-email-icon {
   position: relative;
   left: 850px;
   top: -30px;
 }
-
 
 .affliate-email-card {
   padding-top: 12px;
@@ -1254,162 +1247,162 @@ margin-left: 220px;
   gap: 260px;
 }
 
-.affiliate-card2-text1{
+.affiliate-card2-text1 {
   margin-left: 262px;
 }
 
-.second-text2{
+.second-text2 {
   margin-left: 270px;
 }
 
-.second-card2-text1{
+.second-card2-text1 {
   margin-left: 270px;
 }
 
-.second-toggle-text{
+.second-toggle-text {
   position: relative;
   left: 915px;
   top: -21px;
 }
 
-.second-toggle-text1{
+.second-toggle-text1 {
   position: relative;
   left: 825px;
   top: -20px;
 }
 
-.affliate-card2-text3{
+.affliate-card2-text3 {
   margin-left: 270px;
 }
 
-.second-toggle-text2{
+.second-toggle-text2 {
   position: relative;
   left: 755px;
   top: -20px;
 }
 
-.affliate-fourth{
+.affliate-fourth {
   margin-left: 270px;
 }
 
-.affliate-fourth-text1{
+.affliate-fourth-text1 {
   margin-left: 263px;
 }
 
-.affliate-fourth-text2{
+.affliate-fourth-text2 {
   margin-left: 263px;
 }
-.affliate-fourth-text3{
+.affliate-fourth-text3 {
   margin-left: 263px;
 }
-.affliate-fourth-text4{
+.affliate-fourth-text4 {
   margin-left: 263px;
 }
-.affliate-fourth-text5{
+.affliate-fourth-text5 {
   margin-left: 275px;
   position: relative;
   top: 50px;
 }
 
-.affiliate-fifth-text1{
+.affiliate-fifth-text1 {
   margin-left: 200px;
 }
 
-.affliate-fifth-text2{
-  margin-left: 200px;
-  padding-top: 4px;
-}
-
-.affliate-fifth-text3{
-  margin-left: 200px;
-  padding-top: 4px;
-}
-.affliate-fifth-text4{
-  margin-left: 200px;
-  padding-top: 4px;
-}
-.affliate-fifth-text5{
-  margin-left: 200px;
-  padding-top: 4px;
-}
-.affliate-fifth-text6{
+.affliate-fifth-text2 {
   margin-left: 200px;
   padding-top: 4px;
 }
 
-.sixth-toggle-text1{
+.affliate-fifth-text3 {
+  margin-left: 200px;
+  padding-top: 4px;
+}
+.affliate-fifth-text4 {
+  margin-left: 200px;
+  padding-top: 4px;
+}
+.affliate-fifth-text5 {
+  margin-left: 200px;
+  padding-top: 4px;
+}
+.affliate-fifth-text6 {
+  margin-left: 200px;
+  padding-top: 4px;
+}
+
+.sixth-toggle-text1 {
   position: relative;
   left: 820px;
   top: -20px;
 }
 
-.affiliate-sixth-text1{
+.affiliate-sixth-text1 {
   margin-left: 155px;
 }
-.affliate-sixth-text2{
-  margin-left: 155px;
-  padding-top: 4px;
-}
-.affliate-sixth-text3{
+.affliate-sixth-text2 {
   margin-left: 155px;
   padding-top: 4px;
 }
-.affliate-sixth-text4{
+.affliate-sixth-text3 {
   margin-left: 155px;
   padding-top: 4px;
 }
-.affliate-sixth-text5{
+.affliate-sixth-text4 {
   margin-left: 155px;
   padding-top: 4px;
 }
-.affliate-sixth-text6{
+.affliate-sixth-text5 {
+  margin-left: 155px;
+  padding-top: 4px;
+}
+.affliate-sixth-text6 {
   margin-left: 155px;
   padding-top: 4px;
 }
 
-.sales-textfield{
+.sales-textfield {
   display: flex;
   justify-content: end;
 }
 
-.affliate-payment{
+.affliate-payment {
   max-width: 880px;
   padding-top: 2px;
 }
 
-.affliate-paypal{
+.affliate-paypal {
   padding-top: 2px;
 }
 
-.affliate-trem{
+.affliate-trem {
   padding-top: 8px;
 }
 
-.tremendous-grid2{
+.tremendous-grid2 {
   padding-left: 54px;
   padding-top: 24px;
 }
 
-.tremendus-txtfield{
+.tremendus-txtfield {
   width: 450px;
   max-width: 850px;
 }
 
-.tremendus-btn{
+.tremendus-btn {
   padding-top: 25px;
   padding-left: 4px;
 }
 
-.tremendus-text{
+.tremendus-text {
   padding-top: 9px;
 }
 
-.affliate-settings-text{
+.affliate-settings-text {
   padding-top: 14px;
   padding-left: 6px;
 }
 
-.toogle-switch-affliate{
+.toogle-switch-affliate {
   position: relative;
   left: 85px;
 }
@@ -1422,7 +1415,7 @@ margin-left: 220px;
 }
 
 .affliate-settings-text-1 {
-  max-width: 220px; 
+  max-width: 220px;
 }
 
 .affliate-settings-card {
@@ -1430,23 +1423,23 @@ margin-left: 220px;
   max-width: 750px;
 }
 
-.settings-affliate-select{
+.settings-affliate-select {
   padding-top: 6px;
 }
 
-.settings-affilate-text{
+.settings-affilate-text {
   max-width: 850px;
   width: 600px;
   padding-top: 4px;
 }
 
-.affliate-settings-textfield2{
+.affliate-settings-textfield2 {
   max-width: 450px;
   width: 150px;
   padding-top: 18px;
 }
 
-.affliate-settings-textfield3{
+.affliate-settings-textfield3 {
   max-width: 450px;
   padding-top: 18px;
   width: 450px;

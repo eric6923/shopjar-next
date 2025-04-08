@@ -828,17 +828,21 @@ function Settings() {
                 this URL.
               </Text>
               <InlineStack gap="1000">
-              <div className="affliate-settings-textfield2">
-                <Select
-                  label=""
-                  options={options2}
-                  onChange={handleSelectChange2}
-                  value={selected2}
-                />
-              </div>
-              <div className="affliate-settings-textfield3">
-              <TextField label="" autoComplete="off" placeholder="Shop Url"></TextField>
-              </div>
+                <div className="affliate-settings-textfield2">
+                  <Select
+                    label=""
+                    options={options2}
+                    onChange={handleSelectChange2}
+                    value={selected2}
+                  />
+                </div>
+                <div className="affliate-settings-textfield3">
+                  <TextField
+                    label=""
+                    autoComplete="off"
+                    placeholder="Shop Url"
+                  ></TextField>
+                </div>
               </InlineStack>
             </Box>
           </BlockStack>

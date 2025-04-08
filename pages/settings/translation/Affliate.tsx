@@ -24,7 +24,8 @@ export default function TabsFittedExample() {
         <Grid.Cell columnSpan={{ xs: 6, sm: 3, md: 3, lg: 6, xl: 6 }}>
           <div className="referral-grid-text">
             <Text as="p" variant="bodyLg">
-            Your request submitted successfully. You will receive an email on approval.
+              Your request submitted successfully. You will receive an email on
+              approval.
             </Text>
           </div>
         </Grid.Cell>
@@ -35,18 +36,18 @@ export default function TabsFittedExample() {
         <Grid.Cell columnSpan={{ xs: 6, sm: 3, md: 3, lg: 6, xl: 6 }}>
           <div className="referral-grid-text">
             <Text as="p" variant="bodyLg">
-            Email Already Exists!
+              Email Already Exists!
             </Text>
           </div>
         </Grid.Cell>
         <Grid.Cell columnSpan={{ xs: 6, sm: 3, md: 3, lg: 6, xl: 6 }}>
           <div className="referral-grid-input"></div>
-          <TextField label="" autoComplete="off" ></TextField>
+          <TextField label="" autoComplete="off"></TextField>
         </Grid.Cell>
         <Grid.Cell columnSpan={{ xs: 6, sm: 3, md: 3, lg: 6, xl: 6 }}>
           <div className="referral-grid-text">
             <Text as="p" variant="bodyLg">
-            Unable to process your request, try again later
+              Unable to process your request, try again later
             </Text>
           </div>
         </Grid.Cell>

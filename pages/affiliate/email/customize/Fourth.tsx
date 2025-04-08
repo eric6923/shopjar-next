@@ -55,24 +55,23 @@ function Index() {
       </div>
 
       <div className="translation-text1">
-            <Text as="h1" variant="headingLg">
-            Customize Email Template - Notify when an affiliate earns a commission
-              <label className="toggle-switch2">
-                <input
-                  type="checkbox"
-                  checked={isChecked}
-                  onChange={() => setIsChecked(!isChecked)}
-                />
-                <span className="slider round"></span>
-              </label>
-              <div className="second-toggle-text2">
-              <Text as="p" variant="bodyLg">
-                {isChecked ? "Live" : "Draft"}
-              </Text>
-              </div>
+        <Text as="h1" variant="headingLg">
+          Customize Email Template - Notify when an affiliate earns a commission
+          <label className="toggle-switch2">
+            <input
+              type="checkbox"
+              checked={isChecked}
+              onChange={() => setIsChecked(!isChecked)}
+            />
+            <span className="slider round"></span>
+          </label>
+          <div className="second-toggle-text2">
+            <Text as="p" variant="bodyLg">
+              {isChecked ? "Live" : "Draft"}
             </Text>
-            
           </div>
+        </Text>
+      </div>
 
       <div className="translation-buttongroup">
         <ButtonGroup>
@@ -243,7 +242,7 @@ function Index() {
                 // style={{ overflow: "visible" }}
               >
                 <Box padding="400" paddingInline="400">
-                <div className="custom-textfield-desc">
+                  <div className="custom-textfield-desc">
                     <TextField label="Message Text" autoComplete="off" />
                     <Text as="h6" variant="headingSm">
                       Short codes available
@@ -314,29 +313,30 @@ function Index() {
                 </div>
                 <div className="affiliate-card2-text1">
                   <Text as="h1" variant="headingMd">
-                  You've Got A Reward
+                    You've Got A Reward
                   </Text>
                 </div>
                 <div className="affliate-fourth-text1">
                   <Text as="p" variant="bodyMd">
-                  {`Hey {{affiliate_name}},`}
+                    {`Hey {{affiliate_name}},`}
                   </Text>
                 </div>
                 <div className="affliate-fourth-text2">
                   <Text as="p" variant="bodyMd">
-                  {`Keep referring more friends and earn more rewards`}
+                    {`Keep referring more friends and earn more rewards`}
                   </Text>
                 </div>
                 <div className="affliate-fourth-text4">
                   <Text as="p" variant="bodyMd">
-                  {`Your referral url : {{affiliate_url}}`}
+                    {`Your referral url : {{affiliate_url}}`}
                   </Text>
                 </div>
-                
               </Card>
               <div className="affliate-fourth-text5">
-                <Text as="p" variant="bodyMd">Thank you for shopping with us</Text>
-                </div>
+                <Text as="p" variant="bodyMd">
+                  Thank you for shopping with us
+                </Text>
+              </div>
             </div>
           </Card>
         </div>

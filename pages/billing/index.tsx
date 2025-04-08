@@ -340,7 +340,6 @@ const BillingPage: NextPage = () => {
                             </Text>
                           </List.Item>
                         </Box> */}
-                        
                       </List>
                     </InlineStack>
                   </Box>

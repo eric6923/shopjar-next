@@ -133,8 +133,7 @@ export default function Customize() {
                 size="large"
                 ariaControls="page-title-collapsible"
                 icon={isPageTitleOpen ? ChevronUpIcon : ChevronDownIcon}
-              >   
-              </Button>
+              ></Button>
             </InlineStack>
 
             <Collapsible
@@ -179,13 +178,12 @@ export default function Customize() {
               <div className="referral-button">
                 <Button
                   variant="monochromePlain"
-                  onClick={()=>{}}
+                  onClick={() => {}}
                   ariaExpanded={isReferralOpen}
                   size="large"
                   ariaControls="referral-link-collapsible"
                   icon={isReferralOpen ? ChevronUpIcon : ChevronDownIcon}
-                >
-                </Button>
+                ></Button>
               </div>
             </InlineStack>
 
@@ -228,8 +226,7 @@ export default function Customize() {
                   size="large"
                   ariaControls="page-title-collapsible"
                   icon={isStatsOpen ? ChevronUpIcon : ChevronDownIcon}
-                >
-                </Button>
+                ></Button>
               </div>
             </InlineStack>
 
@@ -270,8 +267,7 @@ export default function Customize() {
                   size="large"
                   ariaControls="page-title-collapsible"
                   icon={isRewardOpen ? ChevronUpIcon : ChevronDownIcon}
-                >
-                </Button>
+                ></Button>
               </div>
             </InlineStack>
 
@@ -327,8 +323,7 @@ export default function Customize() {
                   size="large"
                   ariaControls="page-title-collapsible"
                   icon={isMessagesOpen ? ChevronUpIcon : ChevronDownIcon}
-                >
-                </Button>
+                ></Button>
               </div>
             </InlineStack>
 
@@ -374,8 +369,7 @@ export default function Customize() {
                   size="large"
                   ariaControls="page-title-collapsible"
                   icon={isCustomcssOpen ? ChevronUpIcon : ChevronDownIcon}
-                >
-                </Button>
+                ></Button>
               </div>
             </InlineStack>
 
@@ -413,8 +407,7 @@ export default function Customize() {
                 size="large"
                 ariaControls="page-title-collapsible"
                 icon={isPageTitleOpen ? ChevronUpIcon : ChevronDownIcon}
-              >
-              </Button>
+              ></Button>
             </InlineStack>
 
             <Collapsible
@@ -459,8 +452,7 @@ export default function Customize() {
                   size="large"
                   ariaControls="affiliate-settings-collapsible"
                   icon={isReferralOpen ? ChevronUpIcon : ChevronDownIcon}
-                >
-                </Button>
+                ></Button>
               </div>
             </InlineStack>
 
@@ -504,8 +496,7 @@ export default function Customize() {
                   size="large"
                   ariaControls="affiliate-settings-collapsible"
                   icon={isAstatsOpen ? ChevronUpIcon : ChevronDownIcon}
-                >
-                </Button>
+                ></Button>
               </div>
             </InlineStack>
 
@@ -564,8 +555,7 @@ export default function Customize() {
                   size="large"
                   ariaControls="affiliate-settings-collapsible"
                   icon={isAcouponsOpen ? ChevronUpIcon : ChevronDownIcon}
-                >
-                </Button>
+                ></Button>
               </div>
             </InlineStack>
 
@@ -606,8 +596,7 @@ export default function Customize() {
                   size="large"
                   ariaControls="affiliate-settings-collapsible"
                   icon={isApaypalOpen ? ChevronUpIcon : ChevronDownIcon}
-                >
-                </Button>
+                ></Button>
               </div>
             </InlineStack>
 
@@ -666,8 +655,7 @@ export default function Customize() {
                   size="large"
                   ariaControls="affiliate-settings-collapsible"
                   icon={isACTransactionOpen ? ChevronUpIcon : ChevronDownIcon}
-                >
-                </Button>
+                ></Button>
               </div>
             </InlineStack>
 
@@ -720,8 +708,7 @@ export default function Customize() {
                   size="large"
                   ariaControls="affiliate-settings-collapsible"
                   icon={isACCouponOpen ? ChevronUpIcon : ChevronDownIcon}
-                >
-                </Button>
+                ></Button>
               </div>
             </InlineStack>
 
@@ -783,8 +770,7 @@ export default function Customize() {
                   size="large"
                   ariaControls="affiliate-settings-collapsible"
                   icon={isAMessageOpen ? ChevronUpIcon : ChevronDownIcon}
-                >
-                </Button>
+                ></Button>
               </div>
             </InlineStack>
 
@@ -831,8 +817,7 @@ export default function Customize() {
                   size="large"
                   ariaControls="affiliate-settings-collapsible"
                   icon={isACustomcssOpen ? ChevronUpIcon : ChevronDownIcon}
-                >
-                </Button>
+                ></Button>
               </div>
             </InlineStack>
 
@@ -872,8 +857,8 @@ export default function Customize() {
                   </Text>
                 </div>
                 <TextField
-                label=""
-                autoComplete="off"
+                  label=""
+                  autoComplete="off"
                   suffix={
                     <div className="copy-icon">
                       <svg
@@ -1171,8 +1156,8 @@ export default function Customize() {
                   </Text>
                 </div>
                 <TextField
-                label=""
-                autoComplete="off"
+                  label=""
+                  autoComplete="off"
                   suffix={
                     <div className="copy-icon">
                       <svg
@@ -1518,8 +1503,8 @@ export default function Customize() {
               <Text as="p">Your affiliate coupons</Text>
               <div className="input">
                 <TextField
-                label=""
-                autoComplete="off"
+                  label=""
+                  autoComplete="off"
                   suffix={
                     <div className="copy-icon">
                       <svg
@@ -1697,10 +1682,11 @@ export default function Customize() {
     <div>
       {/* Navigation and Header Section */}
       <div className="translation-icon">
-        <Button variant="secondary" onClick={() => router.push("/settings")}
+        <Button
+          variant="secondary"
+          onClick={() => router.push("/settings")}
           icon={ArrowLeftIcon}
-          >
-        </Button>
+        ></Button>
       </div>
 
       <div className="translation-text1">

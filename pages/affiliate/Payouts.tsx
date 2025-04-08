@@ -1,26 +1,35 @@
-import { Button, Icon, InlineStack, Page, TextField, Box, Text, Pagination } from "@shopify/polaris";
+import {
+  Button,
+  Icon,
+  InlineStack,
+  Page,
+  TextField,
+  Box,
+  Text,
+  Pagination,
+} from "@shopify/polaris";
 import { SearchIcon } from "@shopify/polaris-icons";
 import React, { useCallback, useState } from "react";
 
 function Payouts() {
   const [textFieldValue, setTextFieldValue] = useState("");
   const [pageInput, setPageInput] = useState("1");
-  
+
   const handleTextFieldChange = useCallback(
     (value: string) => setTextFieldValue(value),
     []
   );
-  
+
   const handlePageInputChange = useCallback(
     (value: string) => setPageInput(value),
     []
   );
-  
+
   const handleGoToPage = useCallback(() => {
     // Add your page navigation logic here
     console.log(`Navigating to page ${pageInput}`);
   }, [pageInput]);
-  
+
   return (
     <Page title="Payouts">
       <div className="sales-textfield">
@@ -36,7 +45,7 @@ function Payouts() {
           <Button variant="primary">Search</Button>
         </InlineStack>
       </div>
-      
+
       <Box
         paddingBlockStart="400"
         paddingBlockEnd="400"

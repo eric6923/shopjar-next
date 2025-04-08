@@ -45,9 +45,19 @@ export default function KlaviyoCredentials() {
                 accessibilityLabel="Go back"
                 variant="tertiary"
               />
-              <svg width="35" height="40" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill="#0373FD" d="M0 0h35v40H0z"></path><path d="M26 12H9v3.438h6.445V28h4.081V15.438h6.446V12H26Z" fill="#fff"></path></svg>
+              <svg
+                width="35"
+                height="40"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path fill="#0373FD" d="M0 0h35v40H0z"></path>
+                <path
+                  d="M26 12H9v3.438h6.445V28h4.081V15.438h6.446V12H26Z"
+                  fill="#fff"
+                ></path>
+              </svg>
               <div className="tremendus-text">
-                
                 <Text as="h1" variant="headingLg">
                   Tremendous
                 </Text>
@@ -74,9 +84,13 @@ export default function KlaviyoCredentials() {
                 </div>
               </div>
               <div className="tremendus-btn2">
-              <Button variant="primary" size="large" onClick={handleSaveClick}>
-                Save
-              </Button>
+                <Button
+                  variant="primary"
+                  size="large"
+                  onClick={handleSaveClick}
+                >
+                  Save
+                </Button>
               </div>
             </InlineStack>
           </InlineStack>
@@ -118,7 +132,9 @@ export default function KlaviyoCredentials() {
                       />
                     </div>
                     <div className="tremendus-btn">
-                      <Button variant="primary" size="large">Verify</Button>
+                      <Button variant="primary" size="large">
+                        Verify
+                      </Button>
                     </div>
                   </InlineStack>
                 </Card>

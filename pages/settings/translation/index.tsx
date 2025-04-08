@@ -45,10 +45,11 @@ export default function index() {
   return (
     <div>
       <div className="translation-icon">
-        <Button variant="secondary" onClick={() => router.push("/settings")}
+        <Button
+          variant="secondary"
+          onClick={() => router.push("/settings")}
           icon={ArrowLeftIcon}
-          >
-        </Button>
+        ></Button>
       </div>
       <div className="translation-text1">
         <Text as="h1" variant="headingLg">
@@ -68,25 +69,9 @@ export default function index() {
         <Card>
           <Tabs tabs={tabs} selected={selected} onSelect={handleTabChange} />
 
-            {selected === 0 && (
-            
-                <Referral/>
-         
-            )}
-            {selected === 1 && (
-            
-            <Affliate/>
-     
-        )}
-        {selected === 2 && (
-            
-            <MyAccount/>
-     
-        )}
-
-
-
-          
+          {selected === 0 && <Referral />}
+          {selected === 1 && <Affliate />}
+          {selected === 2 && <MyAccount />}
         </Card>
       </Page>
     </div>

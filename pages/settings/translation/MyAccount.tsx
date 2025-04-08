@@ -24,7 +24,7 @@ export default function TabsFittedExample() {
         <Grid.Cell columnSpan={{ xs: 6, sm: 3, md: 3, lg: 6, xl: 6 }}>
           <div className="referral-grid-text">
             <Text as="p" variant="bodyLg">
-            CASH
+              CASH
             </Text>
           </div>
         </Grid.Cell>
@@ -35,7 +35,7 @@ export default function TabsFittedExample() {
         <Grid.Cell columnSpan={{ xs: 6, sm: 3, md: 3, lg: 6, xl: 6 }}>
           <div className="referral-grid-text">
             <Text as="p" variant="bodyLg">
-            COUPON
+              COUPON
             </Text>
           </div>
         </Grid.Cell>
@@ -46,7 +46,7 @@ export default function TabsFittedExample() {
         <Grid.Cell columnSpan={{ xs: 6, sm: 3, md: 3, lg: 6, xl: 6 }}>
           <div className="referral-grid-text">
             <Text as="p" variant="bodyLg">
-            Reward
+              Reward
             </Text>
           </div>
         </Grid.Cell>
@@ -57,7 +57,7 @@ export default function TabsFittedExample() {
         <Grid.Cell columnSpan={{ xs: 6, sm: 3, md: 3, lg: 6, xl: 6 }}>
           <div className="referral-grid-text">
             <Text as="p" variant="bodyLg">
-            Reward value
+              Reward value
             </Text>
           </div>
         </Grid.Cell>
@@ -68,7 +68,7 @@ export default function TabsFittedExample() {
         <Grid.Cell columnSpan={{ xs: 6, sm: 3, md: 3, lg: 6, xl: 6 }}>
           <div className="referral-grid-text">
             <Text as="p" variant="bodyLg">
-            Approved
+              Approved
             </Text>
           </div>
         </Grid.Cell>
@@ -79,7 +79,7 @@ export default function TabsFittedExample() {
         <Grid.Cell columnSpan={{ xs: 6, sm: 3, md: 3, lg: 6, xl: 6 }}>
           <div className="referral-grid-text">
             <Text as="p" variant="bodyLg">
-            Pending
+              Pending
             </Text>
           </div>
         </Grid.Cell>
@@ -90,7 +90,7 @@ export default function TabsFittedExample() {
         <Grid.Cell columnSpan={{ xs: 6, sm: 3, md: 3, lg: 6, xl: 6 }}>
           <div className="referral-grid-text">
             <Text as="p" variant="bodyLg">
-            Fraud
+              Fraud
             </Text>
           </div>
         </Grid.Cell>
@@ -101,7 +101,7 @@ export default function TabsFittedExample() {
         <Grid.Cell columnSpan={{ xs: 6, sm: 3, md: 3, lg: 6, xl: 6 }}>
           <div className="referral-grid-text">
             <Text as="p" variant="bodyLg">
-            Cancelled
+              Cancelled
             </Text>
           </div>
         </Grid.Cell>
@@ -112,7 +112,7 @@ export default function TabsFittedExample() {
         <Grid.Cell columnSpan={{ xs: 6, sm: 3, md: 3, lg: 6, xl: 6 }}>
           <div className="referral-grid-text">
             <Text as="p" variant="bodyLg">
-            Claimed
+              Claimed
             </Text>
           </div>
         </Grid.Cell>
